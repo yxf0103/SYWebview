@@ -1,8 +1,8 @@
 {
   "name": "SYWebview",
   "version": "0.1.0",
-  "summary": "A short description of SYWebview.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "基于wkwebview的h5和native交互组件",
+  "description": "基于wkwebview的h5和native交互组件",
   "homepage": "https://github.com/massyxf/SYWebview",
   "license": {
     "type": "MIT",
