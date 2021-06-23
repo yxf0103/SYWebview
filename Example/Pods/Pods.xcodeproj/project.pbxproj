@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		04A5D572A2BCEED0DE2CD99753CC1C1A /* Pods-SYWebview_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2B2B4363ABD3D6D30C1FC523D4C3D /* Pods-SYWebview_Tests-dummy.m */; };
-		1491CAD441F41C94D3E610155C701425 /* SYWebview-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A02DB218CDC87364D43F2F476D1488 /* SYWebview-dummy.m */; };
-		1BD03911FBD1D43D01AC0F9A52755AFA /* SYWebview-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 61BF24DADBD6B83FC1CB078B0A220309 /* SYWebview-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4769DB1EF604A101E5D9FB45A8AF35DA /* SYWebBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = E24221960CA46A31A7469C3D92A1D151 /* SYWebBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F4F54B52F59243B22DBFE6859C609DD /* SYWebview-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EFADD0E2EA3B8F93B53672E37A840263 /* SYWebview-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FFA85CF3DFE17FCE13D8F647A0E378B /* SYWebBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E2F4F32994E3BBCF0B02503CBA3BB7B /* SYWebBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4251EAED43C1020A3D1FF6C489F06794 /* SYWebBridge+NativeToH5.m in Sources */ = {isa = PBXBuildFile; fileRef = 1369DE442F591067C72328A0C7B04931 /* SYWebBridge+NativeToH5.m */; };
+		4AB88A31647F7283959456D90B1D18A9 /* SYWebBridge+Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA5F04A44999A72F01CE5FB61B93D71 /* SYWebBridge+Register.m */; };
 		51813F028DDC22E36F1F246422572E7B /* Pods-SYWebview_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4277F8A1C29F31DE575CC4F38CFEF3AE /* Pods-SYWebview_Example-dummy.m */; };
+		55752D178ED96E2233DE95555663CCFF /* SYWebMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E047EA0670BA8E5FDC85D4D84F918E /* SYWebMsg.m */; };
+		67A2673AA6B8A1D6C42686FEE5663D3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		853A6AC785F3BC4300055CB6B2DF07FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		98B1189BC30AF7E49CFED3FA1945F06A /* SYWebBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CB2CE78E6074EF19009EF97E455F77 /* SYWebBridge.m */; };
 		9F4A60618A925E1DEA2F0C8372BC981D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		A9DDD65EE0A39DB1018D986F8F3DC70E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		D0630B57D1D4F0B8E35A327BD695DC99 /* SYWebBridge+NativeToH5.h in Headers */ = {isa = PBXBuildFile; fileRef = AFFADB5F78D440F36CD70E58038BD373 /* SYWebBridge+NativeToH5.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B60523C2A6FE47410B2E2C1CE70F726D /* SYWebBridge+Register.h in Headers */ = {isa = PBXBuildFile; fileRef = D741203FFAFE09ABEF057F86E1C2765A /* SYWebBridge+Register.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C933F9EA3EB804E30963CE109F1D2FD9 /* SYWebMsg.h in Headers */ = {isa = PBXBuildFile; fileRef = 817C3C8DEA2739429243251935E7586F /* SYWebMsg.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DADFAEA3D0378F64B29C4C419E1629C5 /* SYWebBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C605D4C0CD48555DB6087D34309EDAE /* SYWebBridge.m */; };
+		E142FCE769BEA1CA7CBF6ADEFA2060FD /* SYWebview-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58332100D5AE3E2A910D156892DDC2BC /* SYWebview-dummy.m */; };
 		E999D61E68D16C1D343DC52E543524EB /* Pods-SYWebview_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B9A3ED0AC0882C02A4C1DB085E2D5C9 /* Pods-SYWebview_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F1EEB5983D23C4A0546C8F6647E98BB6 /* SYWebBridge+NativeToH5.m in Sources */ = {isa = PBXBuildFile; fileRef = E4583DB97ED2136797FD82DC55B479F6 /* SYWebBridge+NativeToH5.m */; };
+		EDBAAA83F634BFEA4598F1E8804D6FC0 /* SYWebBridge+NativeToH5.h in Headers */ = {isa = PBXBuildFile; fileRef = 762F7CD75965B5C13345B831A97569D1 /* SYWebBridge+NativeToH5.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F38E718DB68A7DBE88CB697311B6AA3D /* Pods-SYWebview_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CEAAE9E154FC24ADB890891B8E1FAB2D /* Pods-SYWebview_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -40,50 +44,54 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14EE0C4BF2011AEAD0DD29F7E1D0C9E7 /* SYWebview-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SYWebview-Info.plist"; sourceTree = "<group>"; };
+		1369DE442F591067C72328A0C7B04931 /* SYWebBridge+NativeToH5.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SYWebBridge+NativeToH5.m"; path = "SYWebview/Classes/SYWebBridge+NativeToH5.m"; sourceTree = "<group>"; };
+		196FCE160304104C949BD3ADBF71AA3C /* SYWebview.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SYWebview.modulemap; sourceTree = "<group>"; };
 		1C0C2AD9D0883240ECF126ACCEAFF6E3 /* Pods-SYWebview_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYWebview_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1C605D4C0CD48555DB6087D34309EDAE /* SYWebBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SYWebBridge.m; path = SYWebview/Classes/SYWebBridge.m; sourceTree = "<group>"; };
 		1F72F1E25BB6DD5B54A38DC9566367C2 /* Pods-SYWebview_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SYWebview_Tests.modulemap"; sourceTree = "<group>"; };
 		22DE866E7FBA37E51775AD7067034B49 /* Pods-SYWebview_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SYWebview_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		24EBD1B5045EB41AC42ED579AB27BE49 /* Pods-SYWebview_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYWebview_Example.release.xcconfig"; sourceTree = "<group>"; };
-		2827B7B1D23AEC2204E70A52A6859699 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		31A02DB218CDC87364D43F2F476D1488 /* SYWebview-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SYWebview-dummy.m"; sourceTree = "<group>"; };
+		27DCD1B31C0D013DD9789913907BB891 /* SYWebview-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYWebview-prefix.pch"; sourceTree = "<group>"; };
+		2832688434A10A6C61DE0D17478A256F /* SYWebview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SYWebview.debug.xcconfig; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3547B6D1B94F70CCE5054FAD9C759839 /* Pods-SYWebview_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SYWebview_Example.modulemap"; sourceTree = "<group>"; };
-		36DF15BC6600EA1AC642E9A2A2275F5F /* SYWebview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SYWebview.release.xcconfig; sourceTree = "<group>"; };
 		3FF2B2B4363ABD3D6D30C1FC523D4C3D /* Pods-SYWebview_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SYWebview_Tests-dummy.m"; sourceTree = "<group>"; };
 		4277F8A1C29F31DE575CC4F38CFEF3AE /* Pods-SYWebview_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SYWebview_Example-dummy.m"; sourceTree = "<group>"; };
+		4BA5F04A44999A72F01CE5FB61B93D71 /* SYWebBridge+Register.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SYWebBridge+Register.m"; path = "SYWebview/Classes/SYWebBridge+Register.m"; sourceTree = "<group>"; };
+		4E2F4F32994E3BBCF0B02503CBA3BB7B /* SYWebBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SYWebBridge.h; path = SYWebview/Classes/SYWebBridge.h; sourceTree = "<group>"; };
 		53AE1B8B04DEB5449343469DC37A6A35 /* Pods-SYWebview_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYWebview_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		58332100D5AE3E2A910D156892DDC2BC /* SYWebview-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SYWebview-dummy.m"; sourceTree = "<group>"; };
 		600A07D8628285A87BDF3B1C9BB75ED0 /* Pods-SYWebview_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SYWebview_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		61BF24DADBD6B83FC1CB078B0A220309 /* SYWebview-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYWebview-umbrella.h"; sourceTree = "<group>"; };
+		6200383E9BB165B071D27467DBDE404A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		64702C28B2CE35379FFAA6882C36C2BC /* Pods-SYWebview_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SYWebview_Tests-Info.plist"; sourceTree = "<group>"; };
-		6766702C5F416D7FD076BA3973BE3C23 /* SYWebview-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYWebview-prefix.pch"; sourceTree = "<group>"; };
 		6F5BCED7E971FF42CC466B392513F32C /* Pods-SYWebview_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SYWebview_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		762F7CD75965B5C13345B831A97569D1 /* SYWebBridge+NativeToH5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SYWebBridge+NativeToH5.h"; path = "SYWebview/Classes/SYWebBridge+NativeToH5.h"; sourceTree = "<group>"; };
+		7B39761B4CEADA71497F3D2451F528AA /* SYWebview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SYWebview.release.xcconfig; sourceTree = "<group>"; };
+		817C3C8DEA2739429243251935E7586F /* SYWebMsg.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SYWebMsg.h; path = SYWebview/Classes/SYWebMsg.h; sourceTree = "<group>"; };
 		95AB4EA3C50AC093EA58EB8ED5A8DB58 /* Pods-SYWebview_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SYWebview_Example-Info.plist"; sourceTree = "<group>"; };
 		9974EC05FFE144AAEC1AF1952A9085E9 /* Pods-SYWebview_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYWebview_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9B9A3ED0AC0882C02A4C1DB085E2D5C9 /* Pods-SYWebview_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SYWebview_Tests-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A1CB2CE78E6074EF19009EF97E455F77 /* SYWebBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SYWebBridge.m; path = SYWebview/Classes/SYWebBridge.m; sourceTree = "<group>"; };
-		A6DA73E7728D3FA26347F72A72AD8F91 /* SYWebview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SYWebview.debug.xcconfig; sourceTree = "<group>"; };
-		AFFADB5F78D440F36CD70E58038BD373 /* SYWebBridge+NativeToH5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SYWebBridge+NativeToH5.h"; path = "SYWebview/Classes/SYWebBridge+NativeToH5.h"; sourceTree = "<group>"; };
-		B96ED8E2789D5D41F710D0413D450147 /* SYWebview.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SYWebview.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BECF2E4575B3E6D44DCF2CC837FA69C1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		C1B099CBF19F80EBBEBAE31F81F29587 /* SYWebview.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SYWebview.modulemap; sourceTree = "<group>"; };
+		A4E047EA0670BA8E5FDC85D4D84F918E /* SYWebMsg.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SYWebMsg.m; path = SYWebview/Classes/SYWebMsg.m; sourceTree = "<group>"; };
+		BD0511BFE8F1B03C3D00C923346D837A /* SYWebview-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SYWebview-Info.plist"; sourceTree = "<group>"; };
 		CAE6093195DDE91A2A536AA7CFC27C6C /* Pods_SYWebview_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SYWebview_Example.framework; path = "Pods-SYWebview_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAAE9E154FC24ADB890891B8E1FAB2D /* Pods-SYWebview_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SYWebview_Example-umbrella.h"; sourceTree = "<group>"; };
 		D66590360D82CDBD21767004C63879FC /* Pods-SYWebview_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SYWebview_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D741203FFAFE09ABEF057F86E1C2765A /* SYWebBridge+Register.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SYWebBridge+Register.h"; path = "SYWebview/Classes/SYWebBridge+Register.h"; sourceTree = "<group>"; };
+		D867D2F3C73ADC1D7A780330D6386C3C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		DBB30326E29F805CF75A8EE3FA82A609 /* Pods_SYWebview_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SYWebview_Tests.framework; path = "Pods-SYWebview_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E24221960CA46A31A7469C3D92A1D151 /* SYWebBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SYWebBridge.h; path = SYWebview/Classes/SYWebBridge.h; sourceTree = "<group>"; };
-		E4583DB97ED2136797FD82DC55B479F6 /* SYWebBridge+NativeToH5.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SYWebBridge+NativeToH5.m"; path = "SYWebview/Classes/SYWebBridge+NativeToH5.m"; sourceTree = "<group>"; };
+		EFADD0E2EA3B8F93B53672E37A840263 /* SYWebview-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYWebview-umbrella.h"; sourceTree = "<group>"; };
 		F60349A78F4215110D6A1F69C3BABD1E /* Pods-SYWebview_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SYWebview_Example-frameworks.sh"; sourceTree = "<group>"; };
 		F8A9806F6C8A3E13ADD0CB7D7B99A893 /* SYWebview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SYWebview.framework; path = SYWebview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD308785A657D6C33C4554047542810 /* SYWebview.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SYWebview.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B7E00B64CFCF472FDBD5B561CE37A191 /* Frameworks */ = {
+		52E44AD78AB050C61FC1487652855742 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9DDD65EE0A39DB1018D986F8F3DC70E /* Foundation.framework in Frameworks */,
+				67A2673AA6B8A1D6C42686FEE5663D3B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,16 +114,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		054FAFFC117F5C06DF40CFAF9A342B87 /* Support Files */ = {
+		32BD7285962996E3680A3FA7EB01AFC5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C1B099CBF19F80EBBEBAE31F81F29587 /* SYWebview.modulemap */,
-				31A02DB218CDC87364D43F2F476D1488 /* SYWebview-dummy.m */,
-				14EE0C4BF2011AEAD0DD29F7E1D0C9E7 /* SYWebview-Info.plist */,
-				6766702C5F416D7FD076BA3973BE3C23 /* SYWebview-prefix.pch */,
-				61BF24DADBD6B83FC1CB078B0A220309 /* SYWebview-umbrella.h */,
-				A6DA73E7728D3FA26347F72A72AD8F91 /* SYWebview.debug.xcconfig */,
-				36DF15BC6600EA1AC642E9A2A2275F5F /* SYWebview.release.xcconfig */,
+				196FCE160304104C949BD3ADBF71AA3C /* SYWebview.modulemap */,
+				58332100D5AE3E2A910D156892DDC2BC /* SYWebview-dummy.m */,
+				BD0511BFE8F1B03C3D00C923346D837A /* SYWebview-Info.plist */,
+				27DCD1B31C0D013DD9789913907BB891 /* SYWebview-prefix.pch */,
+				EFADD0E2EA3B8F93B53672E37A840263 /* SYWebview-umbrella.h */,
+				2832688434A10A6C61DE0D17478A256F /* SYWebview.debug.xcconfig */,
+				7B39761B4CEADA71497F3D2451F528AA /* SYWebview.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/SYWebview";
@@ -128,6 +136,14 @@
 				6623AB8710FAC30BD9B6C9498BC0A498 /* Pods-SYWebview_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5032BD72B89E6299A9338F2843E7932E /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DBD882E49903DF3212014DCA453CFA7 /* SYWebview */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		57765541BDA4937C03281C861FC347BD /* Pods-SYWebview_Example */ = {
@@ -147,6 +163,16 @@
 			path = "Target Support Files/Pods-SYWebview_Example";
 			sourceTree = "<group>";
 		};
+		5CF7D222FD85247097F5F3BF66010160 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				6200383E9BB165B071D27467DBDE404A /* LICENSE */,
+				D867D2F3C73ADC1D7A780330D6386C3C /* README.md */,
+				FAD308785A657D6C33C4554047542810 /* SYWebview.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		6623AB8710FAC30BD9B6C9498BC0A498 /* Pods-SYWebview_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,15 +189,19 @@
 			path = "Target Support Files/Pods-SYWebview_Tests";
 			sourceTree = "<group>";
 		};
-		9C94E059FD6AB021B0873CD87D0206FF /* SYWebview */ = {
+		6DBD882E49903DF3212014DCA453CFA7 /* SYWebview */ = {
 			isa = PBXGroup;
 			children = (
-				E24221960CA46A31A7469C3D92A1D151 /* SYWebBridge.h */,
-				A1CB2CE78E6074EF19009EF97E455F77 /* SYWebBridge.m */,
-				AFFADB5F78D440F36CD70E58038BD373 /* SYWebBridge+NativeToH5.h */,
-				E4583DB97ED2136797FD82DC55B479F6 /* SYWebBridge+NativeToH5.m */,
-				DD3F59E8A102AD66D4D3C155E6C72758 /* Pod */,
-				054FAFFC117F5C06DF40CFAF9A342B87 /* Support Files */,
+				4E2F4F32994E3BBCF0B02503CBA3BB7B /* SYWebBridge.h */,
+				1C605D4C0CD48555DB6087D34309EDAE /* SYWebBridge.m */,
+				762F7CD75965B5C13345B831A97569D1 /* SYWebBridge+NativeToH5.h */,
+				1369DE442F591067C72328A0C7B04931 /* SYWebBridge+NativeToH5.m */,
+				D741203FFAFE09ABEF057F86E1C2765A /* SYWebBridge+Register.h */,
+				4BA5F04A44999A72F01CE5FB61B93D71 /* SYWebBridge+Register.m */,
+				817C3C8DEA2739429243251935E7586F /* SYWebMsg.h */,
+				A4E047EA0670BA8E5FDC85D4D84F918E /* SYWebMsg.m */,
+				5CF7D222FD85247097F5F3BF66010160 /* Pod */,
+				32BD7285962996E3680A3FA7EB01AFC5 /* Support Files */,
 			);
 			name = SYWebview;
 			path = ../..;
@@ -199,7 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				FBBFCECE5A2F9DD8A5FC0693B7F1694F /* Development Pods */,
+				5032BD72B89E6299A9338F2843E7932E /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				9EA96D0D566116F3C8610DE4ADCA70C0 /* Products */,
 				3E2FE887368A343C97D61B7EDCCA118E /* Targets Support Files */,
@@ -214,24 +244,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DD3F59E8A102AD66D4D3C155E6C72758 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				2827B7B1D23AEC2204E70A52A6859699 /* LICENSE */,
-				BECF2E4575B3E6D44DCF2CC837FA69C1 /* README.md */,
-				B96ED8E2789D5D41F710D0413D450147 /* SYWebview.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		FBBFCECE5A2F9DD8A5FC0693B7F1694F /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9C94E059FD6AB021B0873CD87D0206FF /* SYWebview */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -243,16 +255,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		35C7008215D42F2CAC7A58CB037BAB60 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D0630B57D1D4F0B8E35A327BD695DC99 /* SYWebBridge+NativeToH5.h in Headers */,
-				4769DB1EF604A101E5D9FB45A8AF35DA /* SYWebBridge.h in Headers */,
-				1BD03911FBD1D43D01AC0F9A52755AFA /* SYWebview-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		64B3357F0DA33E118FB143CA3D11F76B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,17 +263,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B6A4B76D20814DEF32B8C3B720613523 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDBAAA83F634BFEA4598F1E8804D6FC0 /* SYWebBridge+NativeToH5.h in Headers */,
+				B60523C2A6FE47410B2E2C1CE70F726D /* SYWebBridge+Register.h in Headers */,
+				1FFA85CF3DFE17FCE13D8F647A0E378B /* SYWebBridge.h in Headers */,
+				C933F9EA3EB804E30963CE109F1D2FD9 /* SYWebMsg.h in Headers */,
+				1F4F54B52F59243B22DBFE6859C609DD /* SYWebview-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		28A89DAE4C0F6FFD4D9C6FF3672578A3 /* SYWebview */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 781A711F2C33C57406DD06B296D035DB /* Build configuration list for PBXNativeTarget "SYWebview" */;
+			buildConfigurationList = 07D63E3DA097EA740ECCE1D16D18CFF5 /* Build configuration list for PBXNativeTarget "SYWebview" */;
 			buildPhases = (
-				35C7008215D42F2CAC7A58CB037BAB60 /* Headers */,
-				286940DCC99C7DC3B5DBB008E5D24F6F /* Sources */,
-				B7E00B64CFCF472FDBD5B561CE37A191 /* Frameworks */,
-				3F3A19965E70E02E54FED0450BD8521D /* Resources */,
+				B6A4B76D20814DEF32B8C3B720613523 /* Headers */,
+				635FF68512144D09C046126F60148507 /* Sources */,
+				52E44AD78AB050C61FC1487652855742 /* Frameworks */,
+				63FFA791B4506AEBD0FA0FE0256CB4A9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -357,7 +371,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3F3A19965E70E02E54FED0450BD8521D /* Resources */ = {
+		63FFA791B4506AEBD0FA0FE0256CB4A9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -374,13 +388,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		286940DCC99C7DC3B5DBB008E5D24F6F /* Sources */ = {
+		635FF68512144D09C046126F60148507 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1EEB5983D23C4A0546C8F6647E98BB6 /* SYWebBridge+NativeToH5.m in Sources */,
-				98B1189BC30AF7E49CFED3FA1945F06A /* SYWebBridge.m in Sources */,
-				1491CAD441F41C94D3E610155C701425 /* SYWebview-dummy.m in Sources */,
+				4251EAED43C1020A3D1FF6C489F06794 /* SYWebBridge+NativeToH5.m in Sources */,
+				4AB88A31647F7283959456D90B1D18A9 /* SYWebBridge+Register.m in Sources */,
+				DADFAEA3D0378F64B29C4C419E1629C5 /* SYWebBridge.m in Sources */,
+				55752D178ED96E2233DE95555663CCFF /* SYWebMsg.m in Sources */,
+				E142FCE769BEA1CA7CBF6ADEFA2060FD /* SYWebview-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,9 +468,9 @@
 			};
 			name = Release;
 		};
-		53C2A8BF0CD6A4D4CAA30164C5E40BEC /* Release */ = {
+		447776D433EB777794102012809A8CB9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36DF15BC6600EA1AC642E9A2A2275F5F /* SYWebview.release.xcconfig */;
+			baseConfigurationReference = 7B39761B4CEADA71497F3D2451F528AA /* SYWebview.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -517,9 +533,9 @@
 			};
 			name = Debug;
 		};
-		85F45B3117244086D0DD0F05A273BD6D /* Debug */ = {
+		83ABAB8D660DE92C63C4DB4ECF1F68AC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6DA73E7728D3FA26347F72A72AD8F91 /* SYWebview.debug.xcconfig */;
+			baseConfigurationReference = 2832688434A10A6C61DE0D17478A256F /* SYWebview.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -742,6 +758,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		07D63E3DA097EA740ECCE1D16D18CFF5 /* Build configuration list for PBXNativeTarget "SYWebview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83ABAB8D660DE92C63C4DB4ECF1F68AC /* Debug */,
+				447776D433EB777794102012809A8CB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -756,15 +781,6 @@
 			buildConfigurations = (
 				8C8CABF77F3215FFEC84C4E885DB32F5 /* Debug */,
 				D9479B4D1079B57D8D5DB819CF86EE0F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		781A711F2C33C57406DD06B296D035DB /* Build configuration list for PBXNativeTarget "SYWebview" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				85F45B3117244086D0DD0F05A273BD6D /* Debug */,
-				53C2A8BF0CD6A4D4CAA30164C5E40BEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

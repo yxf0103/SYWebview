@@ -11,11 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SYWebBridge (NativeToH5)
 
--(void)sendMsgToH5:(NSDictionary *)params
+-(void)sendMsgToH5:(SYWebMsg *)msg
            success:(SYWebCallback _Nullable)succback
               fail:(SYWebCallback _Nullable)failback;
 
--(void)handleCallbackMsg:(NSDictionary *)msg;
+-(void)handleCallbackMsg:(SYWebMsg *)msg;
 
 @end
 

@@ -6,20 +6,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <WebKit/WebKit.h>
-
-typedef void (^SYWebCallback)(NSDictionary *_Nullable);
+#import "SYWebMsg.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @class SYWebBridge;
 @protocol SYWebBridgeDelegate <NSObject>
 
--(void)bridge:(SYWebBridge *)bridge
-receiveWebMsg:(NSString *)name
-       params:(NSDictionary *)params
-      success:(SYWebCallback)success
-         fail:(SYWebCallback)fail;
+-(void)bridge:(SYWebBridge *)bridge receiveWebMsg:(SYWebMsg *)msg;
 
 @end
 
@@ -34,8 +28,6 @@ receiveWebMsg:(NSString *)name
 
 -(void)addBridge;
 -(void)removeBridge;
-
--(NSString *)strWithDic:(NSDictionary *)dic;
 
 @end
 

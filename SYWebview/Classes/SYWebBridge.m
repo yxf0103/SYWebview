@@ -7,8 +7,9 @@
 
 #import "SYWebBridge.h"
 #import "SYWebBridge+NativeToH5.h"
+#import "SYWebBridge+Register.h"
 
-static NSString *const sy_msg_from_web = @"msgFromH5";
+static NSString *const sy_msg_from_web = @"syMsgFromH5";
 
 @interface SYWebBridge ()<WKScriptMessageHandler>
 
@@ -41,57 +42,29 @@ static NSString *const sy_msg_from_web = @"msgFromH5";
 
 //MARK: WKScriptMessageHandler
 -(void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
-    NSLog(@"%@",message.body);
     if ([message.name isEqualToString:sy_msg_from_web] && [message.body isKindOfClass:NSDictionary.class]) {
         NSDictionary *params = message.body;
-        NSString *msgId = params[@"callbackId"];
-        NSDictionary *alParams = params[@"params"];
-        NSString *name = alParams[@"key"];
-        if ([name isEqualToString:@"sy_nativeCallback"]) {
-            [self handleCallbackMsg:alParams];
+        SYWebMsg *msgModel = [SYWebMsg initWithMsg:params webview:_webview];
+        //native发送消息到h5收到的回调
+        if ([msgModel.key isEqualToString:@"sy_nativeCallback"]) {
+            [self handleCallbackMsg:msgModel];
             return;
         }
-        if ([name isEqualToString:@"sy_web_log"] && _showLog) {
-            NSLog(@"web日志:%@",params);
+        //打印h5日志
+        if ([msgModel.key isEqualToString:@"sy_web_log"] && _showLog) {
+            NSLog(@"web日志:%@",msgModel.params);
             return;
         }
-        NSDictionary *realParams = alParams[@"param"];
-        if ([_delegate respondsToSelector:@selector(bridge:receiveWebMsg:params:success:fail:)]) {
-            __weak typeof(self) weakSelf = self;
-            [_delegate bridge:self receiveWebMsg:name params:realParams
-                      success:^(NSDictionary * _Nullable sucDic) {
-                [weakSelf webCallback:sucDic msgid:msgId isSuccess:YES];
-            } fail:^(NSDictionary * _Nullable failDic) {
-                [weakSelf webCallback:failDic msgid:msgId isSuccess:NO];
-            }];
+        //处理注册过的消息
+        if ([self handleRegisterMsg:msgModel]) {
+            return;
+        }
+        if ([_delegate respondsToSelector:@selector(bridge:receiveWebMsg:)]) {
+            [_delegate bridge:self receiveWebMsg:msgModel];
         }
         return;
     }
-}
-
-//MARK: custom func
--(void)webCallback:(NSDictionary *)dic msgid:(NSString *)msgid isSuccess:(BOOL)success{
-    NSMutableDictionary *mDic = [NSMutableDictionary dictionary];
-    mDic[@"callbackId"] = msgid;
-    mDic[@"params"] = dic;
-    mDic[@"isSucCallback"] = @(success);
-    NSString *js = [NSString stringWithFormat:@"syWebcallback('%@')",[self strWithDic:mDic]];
-    [_webview evaluateJavaScript:js completionHandler:^(id _Nullable ret, NSError * _Nullable error) {
-        
-    }];
-}
-
--(NSString *)strWithDic:(NSDictionary *)dic{
-    if (dic == nil) {
-        return @"";
-    }
-    NSError *error = nil;
-    NSData *data = [NSJSONSerialization dataWithJSONObject:dic options:kNilOptions error:&error];
-    if (data == nil) {
-        NSLog(@"参数转换出现错误:%@",error);
-        return @"";
-    }
-    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"其他消息：%@",message.body);
 }
 
 @end

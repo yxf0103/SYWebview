@@ -9,7 +9,6 @@
 #import <objc/runtime.h>
 
 const char msg_dic = 'm';
-static NSUInteger msg_unique_id = 1;
 
 @interface SYWebNativeCallback : NSObject
 
@@ -19,7 +18,6 @@ static NSUInteger msg_unique_id = 1;
 @end
 
 @implementation SYWebNativeCallback
-
 
 @end
 
@@ -41,27 +39,18 @@ static NSUInteger msg_unique_id = 1;
     return dic;
 }
 
--(void)sendMsgToH5:(NSDictionary *)params success:(SYWebCallback _Nullable)succback fail:(SYWebCallback _Nullable)failback{
-    NSString *msgId = [self createMsgid];
-    NSMutableDictionary *newDic = [NSMutableDictionary dictionary];
-    newDic[@"callbackId"] = msgId;
-    newDic[@"params"] = params;
-    
+-(void)sendMsgToH5:(SYWebMsg *)msg success:(SYWebCallback)succback fail:(SYWebCallback)failback{
     SYWebNativeCallback *nativeBack = [SYWebNativeCallback new];
     nativeBack.success = succback;
     nativeBack.fail = failback;
-    self.msgDic[msgId] = nativeBack;
-    
-    NSString *js = [NSString stringWithFormat:@"nativeSendToH5('%@')",[self strWithDic:newDic]];
-    [self.webview evaluateJavaScript:js completionHandler:^(id _Nullable ret, NSError * _Nullable error) {
-        
-    }];
+    self.msgDic[msg.msgId] = nativeBack;
+    [msg send];
 }
 
--(void)handleCallbackMsg:(NSDictionary *)msg{
-    NSString *msgId = msg[@"msgId"];
-    BOOL success = [msg[@"issuccess"] boolValue];
-    NSDictionary *param = msg[@"param"];
+-(void)handleCallbackMsg:(SYWebMsg *)msg{
+    NSString *msgId = msg.msgId;
+    BOOL success = msg.isSuccess;
+    NSDictionary *param = msg.params;
     SYWebNativeCallback *callback = self.msgDic[msgId];
     self.msgDic[msgId] = nil;
     if (callback == nil) { return; }
@@ -76,14 +65,7 @@ static NSUInteger msg_unique_id = 1;
     }
 }
 
--(NSString *)createMsgid{
-    NSString *str = @"";
-    @synchronized (self) {
-        str = [NSString stringWithFormat:@"sy_native_msg_%lu_%p",(unsigned long)msg_unique_id,self];
-        msg_unique_id += 1;
-    }
-    return str;
-}
+
 
 
 @end

@@ -46,17 +46,18 @@
 }
 
 -(IBAction)dadaClick:(id)sender{
-    [_bridge sendMsgToH5:@{@"key":@"test",@"param":@{@"wahaha":@"hahaha"}} success:^(NSDictionary * _Nullable dic) {
+    SYWebMsg *msg = [SYWebMsg initwithKey:@"test" param:@{@"wahaha":@"hahaha"} webview:_bridge.webview];
+    [_bridge sendMsgToH5:msg success:^(NSDictionary * _Nullable dic) {
         NSLog(@"成功：%@",dic);
     } fail:^(NSDictionary * _Nullable dic) {
         NSLog(@"失败：%@",dic);
     }];
 }
 
--(void)bridge:(SYWebBridge *)bridge receiveWebMsg:(NSString *)name params:(NSDictionary *)params success:(SYWebCallback)success fail:(SYWebCallback)fail{
-    if ([name isEqualToString:@"changeColor"]) {
-//        success(@{@"changeColor":@"success"});
-        fail(@{@"changeColor":@"fail"});
+-(void)bridge:(SYWebBridge *)bridge receiveWebMsg:(SYWebMsg *)msg{
+    if ([msg.key isEqual:@"changeColor"]) {
+        //msg.success(@{@"changeColor":@"success"});
+        msg.fail(@{@"changeColor":@"fail"});
     }
 }
 
