@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
   基于wkwebview的h5和native交互组件
                        DESC
 
-  s.homepage         = 'https://github.com/massyxf/SYWebview'
+  s.homepage         = 'https://github.com/yxf0103/SYWebview'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'massyxf' => 'ssi-yanxf@dfmc.com.cn' }
-  s.source           = { :git => 'https://github.com/massyxf/SYWebview.git', :tag => s.version.to_s }
+  s.author           = { 'yxf0103' => 'ssi-yanxf@dfmc.com.cn' }
+  s.source           = { :git => 'https://github.com/yxf0103/SYWebview.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
