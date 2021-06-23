@@ -36,11 +36,13 @@
         var obj = document.getElementById('colordv');
         obj.onclick = function(){
             this.style.backgroundColor = "blue";
-            var params = {key:"changeColor",param:{name:"color",haha:"haha"}};
-            bridge.h5SendToNative(params,function(success){
+            var that = this;
+            bridge.h5SendToNative("changeColor",{name:"color",haha:"haha"},function(success){
                 bridge.logInNative(success);
+                that.style.backgroundColor = "yellow";
             },function(fail){
                 bridge.logInNative(fail);
+                that.style.backgroundColor = "pink";
             });
 
         }
