@@ -96,7 +96,7 @@ bridge.registerFunc("native_to_h5",handleTestRegister);
 
 ## Author
 
-massyxf, ssi-yanxf@dfmc.com.cn
+yxf, yxfeng0103@hotmail.com
 
 ## License
 
