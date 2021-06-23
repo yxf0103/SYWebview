@@ -8,6 +8,7 @@ function SYWebInjection() {
     obj.nativeCallback = nativeCallback;
     obj.handleNativeMsg = handleNativeMsg;
     obj.syRealH5SendToNative = syRealH5SendToNative;
+    obj.registerFunc = registerFunc;
     return obj;
 }
 
@@ -95,6 +96,10 @@ function nativeSendToH5(params) {
     var failCallback = function (failParams) {
         this.nativeCallback(failParams, msgid, false);
     };
+    var isRegistered = this.handleRegEvent(key,params,sucCallback,failCallback);
+    if(isRegistered){
+        return;
+    }
     if (this.handleNativeMsg == undefined) {
         return;
     }
@@ -107,10 +112,25 @@ function nativeCallback(params, msgid, issuccess) {
 
 //需要重写此方法
 function handleNativeMsg(key,params, success, fail) {
+    console.log("请自己实现这个方法");
     if(key == "test"){
         this.logInNative(params);
         // success({nice:"success"});
         fail({nice:"fail"});
         return;
     }
+}
+
+var sy_reg_dic = {};
+function registerFunc(key,handle) {
+    sy_reg_dic[key] = handle;    
+}
+
+function handleRegEvent(key,params,success,fail) {
+    var handle = sy_reg_dic[key];
+    if (handle == undefined){
+        return false;
+    }
+    handle(params,success,fail);
+    return true;
 }

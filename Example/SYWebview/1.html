@@ -23,7 +23,7 @@
 
 <div id="colordv" class="icon"></div>
 
-<button id="btn">上传</button>
+<button id="btn">发送注册消息</button>
 <div id="url">
     <img id="img" src="" alt="">
 </div>
@@ -32,22 +32,33 @@
 
 <script>
     var bridge = SYWebInjection();
+    var handleTestRegister = function(params,success,fail){
+        bridge.logInNative(params);
+        success({"msg":"h5 handle msg success"});
+    };
+    bridge.registerFunc("native_to_h5",handleTestRegister);
     window.onload = function(){
         var obj = document.getElementById('colordv');
         obj.onclick = function(){
             this.style.backgroundColor = "blue";
             var that = this;
-            bridge.h5SendToNative("changeColor",{name:"color",haha:"haha"},function(success){
-                bridge.logInNative(success);
+            bridge.h5SendToNative("changeColor",{name:"color",haha:"haha"},function(prams){
+                bridge.logInNative(prams);
                 that.style.backgroundColor = "yellow";
-            },function(fail){
-                bridge.logInNative(fail);
+            },function(prams){
+                bridge.logInNative(prams);
                 that.style.backgroundColor = "pink";
             });
 
         }
-        document.getElementById('btn').addEventListener('click', function() {
-                                                        });
+        document.getElementById('btn')
+        .addEventListener('click', function() {
+            bridge.h5SendToNative("h5_to_native",{msg:"jojo"},function(prams){
+                bridge.logInNative(prams);
+            },function(prams){
+                bridge.logInNative(prams);
+            });
+        });
     }
 </script>
 
