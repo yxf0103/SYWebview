@@ -1,0 +1,6 @@
+framework module SYWebview {
+  umbrella header "SYWebview-umbrella.h"
+
+  export *
+  module * { export * }
+}

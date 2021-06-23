@@ -7,23 +7,57 @@
 //
 
 #import "SYViewController.h"
+#import <SYWebview/SYWebBridge+NativeToH5.h>
 
-@interface SYViewController ()
+@interface SYViewController ()<SYWebBridgeDelegate>{
+    SYWebBridge *_bridge;
+}
 
 @end
 
 @implementation SYViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
+    WKPreferences *prefences = [[WKPreferences alloc] init];
+    prefences.javaScriptCanOpenWindowsAutomatically = YES;
+    prefences.minimumFontSize = 30;
+    config.preferences = prefences;
+    WKWebView *webview = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
+    [self.view addSubview:webview];
+    
+   _bridge = [SYWebBridge initWithWebview:webview];
+    [_bridge addBridge];
+    _bridge.delegate = self;
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"1.html" ofType:nil];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
+    [webview loadRequest:request];
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:btn];
+    btn.backgroundColor = [UIColor redColor];
+    btn.frame = CGRectMake(100, 300, 80, 40);
+    [btn setTitle:@"dada" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(dadaClick:) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(IBAction)dadaClick:(id)sender{
+    [_bridge sendMsgToH5:@{@"key":@"test",@"param":@{@"wahaha":@"hahaha"}} success:^(NSDictionary * _Nullable dic) {
+        NSLog(@"成功：%@",dic);
+    } fail:^(NSDictionary * _Nullable dic) {
+        NSLog(@"失败：%@",dic);
+    }];
+}
+
+-(void)bridge:(SYWebBridge *)bridge receiveWebMsg:(NSString *)name params:(NSDictionary *)params success:(SYWebCallback)success fail:(SYWebCallback)fail{
+    if ([name isEqualToString:@"changeColor"]) {
+//        success(@{@"changeColor":@"success"});
+        fail(@{@"changeColor":@"fail"});
+    }
 }
 
 @end

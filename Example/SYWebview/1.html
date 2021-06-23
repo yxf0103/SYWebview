@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #colordv{
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            background-color:red;
+        }
+    .icon{
+        
+    }
+    img{
+        width: 200px;
+        height: 200px;
+    }
+    </style>
+</head>
+<body>
+
+<div id="colordv" class="icon"></div>
+
+<button id="btn">上传</button>
+<div id="url">
+    <img id="img" src="" alt="">
+</div>
+
+<script src="SYWebInjection.js"></script>
+
+<script>
+    var bridge = SYWebInjection();
+    window.onload = function(){
+        var obj = document.getElementById('colordv');
+        obj.onclick = function(){
+            this.style.backgroundColor = "blue";
+            var params = {key:"changeColor",param:{name:"color",haha:"haha"}};
+            bridge.h5SendToNative(params,function(success){
+                bridge.logInNative(success);
+            },function(fail){
+                bridge.logInNative(fail);
+            });
+
+        }
+        document.getElementById('btn').addEventListener('click', function() {
+                                                        });
+    }
+</script>
+
+</body>
+</html>
