@@ -24,12 +24,7 @@ pod 'SYWebview'
 ```
 
 ## How to use
-1.js初始化
-首先将demo中的 'SYWebInjection.js'引入
-```
-<script src="SYWebInjection.js"></script>
-```
-在js中实现
+1.js初始化,在js中实现
 ```
 var bridge = SYWebInjection();
 bridge.handleNativeMsg = function(key,params, success, fail) {
