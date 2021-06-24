@@ -27,8 +27,6 @@ pod 'SYWebview'
 ### 1.js初始化,在js中实现
 ```
 var bridge = SYWebInjection();
-bridge.handleNativeMsg = function(key,params, success, fail) {
-}
 ```
 ### 2.native初始化
 ```
@@ -75,7 +73,7 @@ bridge.h5SendToNative("h5_to_native",{msg:"jojo"},function(prams){
 });
 ```
 ### 6.js处理native发过来的消息
-*直接处理：实现1中的方法
+*直接处理
 ```
 bridge.handleNativeMsg = function(key,params, success, fail) {
 }
