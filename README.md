@@ -24,19 +24,19 @@ pod 'SYWebview'
 ```
 
 ## How to use
-1.js初始化,在js中实现
+### 1.js初始化,在js中实现
 ```
 var bridge = SYWebInjection();
 bridge.handleNativeMsg = function(key,params, success, fail) {
 }
 ```
-2.native初始化
+### 2.native初始化
 ```
 _bridge = [SYWebBridge initWithWebview:webview];
  [_bridge addBridge];
  _bridge.delegate = self;
 ```
-3.native给h5发送消息
+### 3.native给h5发送消息
 ```
 SYWebMsg *msg = [SYWebMsg initwithKey:@"test" param:@{@"wahaha":@"hahaha"} webview:_bridge.webview];
 [_bridge sendMsgToH5:msg success:^(NSDictionary * _Nullable dic) {
@@ -45,8 +45,8 @@ SYWebMsg *msg = [SYWebMsg initwithKey:@"test" param:@{@"wahaha":@"hahaha"} webvi
     NSLog(@"失败：%@",dic);
 }];
 ```
-4.native处理h5发过来的消息
-代理模式
+### 4.native处理h5发过来的消息
+*代理模式
 ```
 -(void)bridge:(SYWebBridge *)bridge receiveWebMsg:(SYWebMsg *)msg{
     if ([msg.key isEqual:@"changeColor"]) {
@@ -57,7 +57,7 @@ SYWebMsg *msg = [SYWebMsg initwithKey:@"test" param:@{@"wahaha":@"hahaha"} webvi
 }
 
 ```
-注册模式
+*注册模式
 ```
 [_bridge registerKey:@"h5_to_native" handle:^(NSDictionary * _Nullable dic,
                                               SYWebCallback _Nullable success,
@@ -66,7 +66,7 @@ SYWebMsg *msg = [SYWebMsg initwithKey:@"test" param:@{@"wahaha":@"hahaha"} webvi
     //success(@{@"msg":@"register test success"});
 }];
 ```
-5.js给native发送消息
+### 5.js给native发送消息
 ```
 bridge.h5SendToNative("h5_to_native",{msg:"jojo"},function(prams){
     //...成功的回调处理
@@ -74,13 +74,13 @@ bridge.h5SendToNative("h5_to_native",{msg:"jojo"},function(prams){
     //...失败的回调处理
 });
 ```
-6.js处理native发过来的消息
-直接处理：实现1中的方法
+### 6.js处理native发过来的消息
+*直接处理：实现1中的方法
 ```
 bridge.handleNativeMsg = function(key,params, success, fail) {
 }
 ```
-注册模式
+*注册模式
 ```
 var handleTestRegister = function(params,success,fail){
     bridge.logInNative(params);
