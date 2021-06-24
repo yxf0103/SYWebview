@@ -87,7 +87,7 @@ function nativeSendToH5(params) {
     var key = jsonObj["sy_key"];
     var issuccess = Boolean(jsonObj["sy_success"]);
     if (key == "sy_web_callback"){
-        this.syWebcallback(msgid,params,issuccess);
+        this.syWebcallback(msgid,param,issuccess);
         return
     }
     var sucCallback = function (sucParams) {
@@ -96,7 +96,7 @@ function nativeSendToH5(params) {
     var failCallback = function (failParams) {
         this.nativeCallback(failParams, msgid, false);
     };
-    var isRegistered = this.handleRegEvent(key,params,sucCallback,failCallback);
+    var isRegistered = this.handleRegEvent(key,param,sucCallback,failCallback);
     if(isRegistered){
         return;
     }

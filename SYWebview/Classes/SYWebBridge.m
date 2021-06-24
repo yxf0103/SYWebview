@@ -33,12 +33,35 @@ static NSString *const sy_msg_from_web = @"syMsgFromH5";
 }
 
 -(void)addBridge{
+    NSString *jsStr = [self injectionJs];
+    if (jsStr.length > 0) {
+        //注入时机是在webview加载状态WKUserScriptInjectionTimeAtDocumentStart、WKUserScriptInjectionTimeAtDocumentEnd
+        WKUserScript *userScript = [[WKUserScript alloc] initWithSource:jsStr injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
+        [_webview.configuration.userContentController addUserScript:userScript];
+    }
+    
     [_webview.configuration.userContentController addScriptMessageHandler:self name:sy_msg_from_web];
 }
 
 -(void)removeBridge{
     [_webview.configuration.userContentController removeScriptMessageHandlerForName:sy_msg_from_web];
 }
+
+-(NSString *)injectionJs{
+    NSBundle *bundle = [NSBundle bundleForClass:self.class];
+    NSString *jsName = @"SYWebInjection.js";
+    NSString *jspath = [bundle pathForResource:jsName ofType:nil];
+    if (jspath == nil) {
+        NSString *bundlepath = [bundle pathForResource:@"SYWebview.bundle" ofType:nil];
+        bundle = [NSBundle bundleWithPath:bundlepath];
+        jspath = [bundle pathForResource:jsName ofType:nil];
+    }
+    if (jspath == nil) {
+        return @"";
+    }
+    return [NSString stringWithContentsOfFile:jspath encoding:NSUTF8StringEncoding error:nil];
+}
+
 
 //MARK: WKScriptMessageHandler
 -(void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{

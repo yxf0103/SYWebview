@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SYWebview'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = '基于wkwebview的h5和native交互组件'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  基于wkwebview的h5和native交互组件
+  基于wkwebview的h5和native交互组件,可以很方便的处理各种回调事件
                        DESC
 
   s.homepage         = 'https://github.com/yxf0103/SYWebview'
@@ -32,9 +32,9 @@ Pod::Spec.new do |s|
 
   s.source_files = 'SYWebview/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'SYWebview' => ['SYWebview/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'SYWebview' => ['SYWebview/Assets/**/*']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
