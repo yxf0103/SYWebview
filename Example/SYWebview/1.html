@@ -37,6 +37,17 @@
         success({"msg":"h5 handle msg success"});
     };
     bridge.registerFunc("native_to_h5",handleTestRegister);
+    
+    bridge.handleNativeMsg = function(key, params, success, fail){
+        console.log("请自己实现这个方法");
+            if (key == "test") {
+                this.logInNative(params);
+                // success({nice:"success"});
+                fail({ nice: "fail" });
+                return;
+            }
+    };
+    
     window.onload = function(){
         var obj = document.getElementById('colordv');
         obj.onclick = function(){

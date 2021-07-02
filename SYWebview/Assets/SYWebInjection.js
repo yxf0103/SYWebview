@@ -9,10 +9,17 @@ function SYWebInjection() {
     obj.handleNativeMsg = handleNativeMsg;
     obj.syRealH5SendToNative = syRealH5SendToNative;
     obj.registerFunc = registerFunc;
+
+    //保存消息的回调方法
+    obj.sy_web_func_dic = {};
+    //注册的消息
+    obj.sy_reg_dic = {};
+    obj.uniqueId = 1;
+
     return obj;
 }
 
-function SYWebMsg(msgid,key,params,issuccess){
+function SYWebMsg(msgid, key, params, issuccess) {
     var obj = new Object();
     obj.msgid = msgid;
     obj.key = key;
@@ -21,24 +28,18 @@ function SYWebMsg(msgid,key,params,issuccess){
     return obj;
 }
 
-//保存h5发送消息到native的回调方法
-var sy_web_func_dic = {};
-//保存native发送消息到h5的回调方法
-var sy_native_func_dic = {};
-var uniqueId = 1;
-
 function logInNative(params) {
     var msgid = this.createMsgId()
-    this.syRealH5SendToNative(msgid,"sy_web_log",params);
+    this.syRealH5SendToNative(msgid, "sy_web_log", params);
 }
 
-function h5SendToNative(key,params,success,fail) {
+function h5SendToNative(key, params, success, fail) {
     var msgid = this.createMsgId()
-    this.syRealH5SendToNative(msgid,key,params,true,success,fail);
+    this.syRealH5SendToNative(msgid, key, params, true, success, fail);
 }
 
 //h5发送消息给native
-function syRealH5SendToNative(msgid,key,params,isSuccess, success, fail) {
+function syRealH5SendToNative(msgid, key, params, isSuccess, success, fail) {
     /*
  msg = {
  sy_msgid:xxx,
@@ -50,18 +51,18 @@ function syRealH5SendToNative(msgid,key,params,isSuccess, success, fail) {
     var msg = {
         sy_msgid: msgid,
         sy_key: key,
-        sy_params:params,
-        sy_success:isSuccess
+        sy_params: params,
+        sy_success: isSuccess
     };
-    sy_web_func_dic[msgid] = { success: success, fail: fail };
+    this.sy_web_func_dic[msgid] = { success: success, fail: fail };
     window.webkit.messageHandlers.syMsgFromH5.postMessage(msg);
 }
 
 ///native执行完消息之后的回调
-function syWebcallback(msgid,params,issuccess) {
-    var callback = sy_web_func_dic[msgid];
+function syWebcallback(msgid, params, issuccess) {
+    var callback = this.sy_web_func_dic[msgid];
     if (callback == undefined) { return; }
-    sy_web_func_dic[msgid] = null;
+    this.sy_web_func_dic[msgid] = null;
     if (issuccess) {
         var success = callback["success"];
         if (success == undefined) { return; }
@@ -74,7 +75,7 @@ function syWebcallback(msgid,params,issuccess) {
 }
 
 function createMsgId() {
-    return 'cb_' + (uniqueId++) + '_' + new Date().getTime();
+    return 'cb_' + (this.uniqueId++) + '_' + new Date().getTime();
 }
 
 //native传过来的参数都是字符串，需要先转换成对象
@@ -86,8 +87,8 @@ function nativeSendToH5(params) {
     var param = jsonObj["sy_params"];
     var key = jsonObj["sy_key"];
     var issuccess = Boolean(jsonObj["sy_success"]);
-    if (key == "sy_web_callback"){
-        this.syWebcallback(msgid,param,issuccess);
+    if (key == "sy_web_callback") {
+        this.syWebcallback(msgid, param, issuccess);
         return
     }
     var sucCallback = function (sucParams) {
@@ -96,41 +97,33 @@ function nativeSendToH5(params) {
     var failCallback = function (failParams) {
         this.nativeCallback(failParams, msgid, false);
     };
-    var isRegistered = this.handleRegEvent(key,param,sucCallback,failCallback);
-    if(isRegistered){
+    var isRegistered = this.handleRegEvent(key, param, sucCallback, failCallback);
+    if (isRegistered) {
         return;
     }
     if (this.handleNativeMsg == undefined) {
         return;
     }
-    this.handleNativeMsg(key,param, sucCallback, failCallback);
+    this.handleNativeMsg(key, param, sucCallback, failCallback);
 }
 
 function nativeCallback(params, msgid, issuccess) {
-    this.syRealH5SendToNative(msgid,"sy_nativeCallback",params,issuccess);
+    this.syRealH5SendToNative(msgid, "sy_nativeCallback", params, issuccess);
 }
 
 //需要重写此方法
-function handleNativeMsg(key,params, success, fail) {
-    console.log("请自己实现这个方法");
-    if(key == "test"){
-        this.logInNative(params);
-        // success({nice:"success"});
-        fail({nice:"fail"});
-        return;
-    }
+function handleNativeMsg(key, params, success, fail) {
 }
 
-var sy_reg_dic = {};
-function registerFunc(key,handle) {
-    sy_reg_dic[key] = handle;    
+function registerFunc(key, handle) {
+    this.sy_reg_dic[key] = handle;
 }
 
-function handleRegEvent(key,params,success,fail) {
-    var handle = sy_reg_dic[key];
-    if (handle == undefined){
+function handleRegEvent(key, params, success, fail) {
+    var handle = this.sy_reg_dic[key];
+    if (handle == undefined) {
         return false;
     }
-    handle(params,success,fail);
+    handle(params, success, fail);
     return true;
 }
