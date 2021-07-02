@@ -6,7 +6,11 @@
 [![Platform](https://img.shields.io/cocoapods/p/SYWebview.svg?style=flat)](https://cocoapods.org/pods/SYWebview)
 
 ## Description
-SYWebview是一个基于wkwebview的js交互组件，实现了消息交互和回调处理.
+SYWebview是一个基于wkwebview的js交互组件，实现了消息交互和回调处理.  
+
+inspired by [WebViewJavascriptBridge](https://github.com/marcuswestin/WebViewJavascriptBridge)  
+
+不同于WebViewJavascriptBridge使用拦截url的方式来处理消息，SYWebview使用的是WKWebview的WKScriptMessageHandler
 
 ## Example
 
