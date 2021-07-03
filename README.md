@@ -28,17 +28,14 @@ pod 'SYWebview'
 ```
 
 ## How to use
-### 1.js初始化,在js中实现
-```
-var bridge = SYWebInjection();
-```
-### 2.native初始化
+### 1.native部分
+#### 1.1 native初始化
 ```
 _bridge = [SYWebBridge initWithWebview:webview];
  [_bridge addBridge];
  _bridge.delegate = self;
 ```
-### 3.native给h5发送消息
+#### 1.2 native给h5发送消息
 ```
 SYWebMsg *msg = [SYWebMsg initwithKey:@"test" param:@{@"wahaha":@"hahaha"} webview:_bridge.webview];
 [_bridge sendMsgToH5:msg success:^(NSDictionary * _Nullable dic) {
@@ -47,7 +44,7 @@ SYWebMsg *msg = [SYWebMsg initwithKey:@"test" param:@{@"wahaha":@"hahaha"} webvi
     NSLog(@"失败：%@",dic);
 }];
 ```
-### 4.native处理h5发过来的消息
+#### 1.3 native处理h5发过来的消息
 *代理模式
 ```
 -(void)bridge:(SYWebBridge *)bridge receiveWebMsg:(SYWebMsg *)msg{
@@ -68,27 +65,31 @@ SYWebMsg *msg = [SYWebMsg initwithKey:@"test" param:@{@"wahaha":@"hahaha"} webvi
     //success(@{@"msg":@"register test success"});
 }];
 ```
-### 5.js给native发送消息
+### 2.js部分
+#### 2.1 sy_web_bridge是处理消息的变量 
+
+#### 2.2 js给native发送消息
 ```
-bridge.h5SendToNative("h5_to_native",{msg:"jojo"},function(prams){
+sy_web_bridge.h5SendToNative("h5_to_native",{msg:"jojo"},function(prams){
     //...成功的回调处理
 },function(prams){
     //...失败的回调处理
 });
 ```
-### 6.js处理native发过来的消息
+
+#### 2.3 js处理native发过来的消息
 *直接处理
 ```
-bridge.handleNativeMsg = function(key,params, success, fail) {
+sy_web_bridge.handleNativeMsg = function(key,params, success, fail) {
 }
 ```
 *注册模式
 ```
 var handleTestRegister = function(params,success,fail){
-    bridge.logInNative(params);
+    sy_web_bridge.logInNative(params);
     success({"msg":"h5 handle msg success"});
 };
-bridge.registerFunc("native_to_h5",handleTestRegister);
+sy_web_bridge.registerFunc("native_to_h5",handleTestRegister);
 ```
 
 ## Author

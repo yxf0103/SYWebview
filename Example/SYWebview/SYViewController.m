@@ -35,7 +35,7 @@
     [_bridge registerKey:@"h5_to_native" handle:^(NSDictionary * _Nullable dic,
                                                   SYWebCallback _Nullable success,
                                                   SYWebCallback _Nullable fail) {
-        NSLog(@"处理h5消息:%@",dic);
+        NSLog(@"注册方式,native处理h5消息:%@",dic);
         success(@{@"msg":@"register test success"});
     }];
     
@@ -59,29 +59,31 @@
 }
 
 -(IBAction)dadaClick:(id)sender{
+    NSLog(@"native 发送消息到 h5,普通方式");
     SYWebMsg *msg = [SYWebMsg initwithKey:@"test" param:@{@"wahaha":@"hahaha"} webview:_bridge.webview];
     [_bridge sendMsgToH5:msg success:^(NSDictionary * _Nullable dic) {
-        NSLog(@"成功：%@",dic);
+        NSLog(@"h5处理 test 消息成功：%@",dic);
     } fail:^(NSDictionary * _Nullable dic) {
-        NSLog(@"失败：%@",dic);
+        NSLog(@"h5处理 test 消息失败：%@",dic);
     }];
 }
 
 -(void)regBtnClicked:(UIButton *)btn{
+    NSLog(@"native 发送消息到 h5，注册方式");
     SYWebMsg *msg = [SYWebMsg initwithKey:@"native_to_h5"
                                     param:@{@"wahaha":@"hahaha"}
                                   webview:_bridge.webview];
     [_bridge sendMsgToH5:msg success:^(NSDictionary * _Nullable dic) {
-        NSLog(@"register 消息处理成功:%@",dic);
+        NSLog(@"h5处理 register 消息 native_to_h5 成功:%@",dic);
     } fail:^(NSDictionary * _Nullable dic) {
-        NSLog(@"register 消息处理失败:%@",dic);
+        NSLog(@"h5处理 register 消息 native_to_h5 失败:%@",dic);
     }];
 }
 
 
 -(void)bridge:(SYWebBridge *)bridge receiveWebMsg:(SYWebMsg *)msg{
     if ([msg.key isEqual:@"changeColor"]) {
-        //msg.success(@{@"changeColor":@"success"});
+        NSLog(@"代理方式,native处理h5消息:%@",msg.params);
         msg.fail(@{@"changeColor":@"fail"});
     }
 }

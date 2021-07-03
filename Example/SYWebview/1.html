@@ -1,77 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        #colordv{
+        #colordv {
             width: 100px;
             height: 100px;
             margin: auto;
-            background-color:red;
+            background-color: red;
         }
-    .icon{
-        
-    }
-    img{
-        width: 200px;
-        height: 200px;
-    }
+
+        .icon {}
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
     </style>
 </head>
+
 <body>
 
-<div id="colordv" class="icon"></div>
+    <div id="colordv" class="icon"></div>
 
-<button id="btn">发送注册消息</button>
-<div id="url">
-    <img id="img" src="" alt="">
-</div>
+    <button id="btn">发送注册消息</button>
+    <div id="url">
+        <img id="img" src="" alt="">
+    </div>
 
-<!--<script src="SYWebInjection.js"></script>-->
+    <!--<script src="SYWebInjection.js"></script>-->
 
-<script>
-    var bridge = SYWebInjection();
-    var handleTestRegister = function(params,success,fail){
-        bridge.logInNative(params);
-        success({"msg":"h5 handle msg success"});
-    };
-    bridge.registerFunc("native_to_h5",handleTestRegister);
-    
-    bridge.handleNativeMsg = function(key, params, success, fail){
-        console.log("请自己实现这个方法");
+    <script>
+        var handleTestRegister = function (params, success, fail) {
+            sy_web_bridge.logInNative(params);
+            success({ "msg": "h5 handle msg success,注册方式" });
+        };
+        sy_web_bridge.registerFunc("native_to_h5", handleTestRegister);
+
+        sy_web_bridge.handleNativeMsg = function (key, params, success, fail) {
+            console.log("请自己实现这个方法");
             if (key == "test") {
-                this.logInNative(params);
+                sy_web_bridge.logInNative(params);
                 // success({nice:"success"});
                 fail({ nice: "fail" });
                 return;
             }
-    };
-    
-    window.onload = function(){
-        var obj = document.getElementById('colordv');
-        obj.onclick = function(){
-            this.style.backgroundColor = "blue";
-            var that = this;
-            bridge.h5SendToNative("changeColor",{name:"color",haha:"haha"},function(prams){
-                bridge.logInNative(prams);
-                that.style.backgroundColor = "yellow";
-            },function(prams){
-                bridge.logInNative(prams);
-                that.style.backgroundColor = "pink";
-            });
+        };
 
+        window.onload = function () {
+            var obj = document.getElementById('colordv');
+            obj.onclick = function () {
+                this.style.backgroundColor = "blue";
+                var that = this;
+                sy_web_bridge.h5SendToNative("changeColor", { name: "color", haha: "haha" }, function (prams) {
+                    sy_web_bridge.logInNative(prams);
+                    that.style.backgroundColor = "yellow";
+                }, function (prams) {
+                    sy_web_bridge.logInNative(prams);
+                    that.style.backgroundColor = "pink";
+                });
+
+            }
+            document.getElementById('btn')
+                .addEventListener('click', function () {
+                    sy_web_bridge.h5SendToNative("h5_to_native", { msg: "jojo" }, function (prams) {
+                        sy_web_bridge.logInNative(prams);
+                    }, function (prams) {
+                        sy_web_bridge.logInNative(prams);
+                    });
+                });
         }
-        document.getElementById('btn')
-        .addEventListener('click', function() {
-            bridge.h5SendToNative("h5_to_native",{msg:"jojo"},function(prams){
-                bridge.logInNative(prams);
-            },function(prams){
-                bridge.logInNative(prams);
-            });
-        });
-    }
-</script>
+    </script>
 
 </body>
+
 </html>
