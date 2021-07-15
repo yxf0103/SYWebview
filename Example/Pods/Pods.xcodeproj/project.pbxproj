@@ -7,140 +7,166 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04A5D572A2BCEED0DE2CD99753CC1C1A /* Pods-SYWebview_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2B2B4363ABD3D6D30C1FC523D4C3D /* Pods-SYWebview_Tests-dummy.m */; };
-		0E03276CEA82DD6B8BA745FCED7E240D /* SYWebview-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 57534C6D09B1B63C7E04DC5B05B746AE /* SYWebview-dummy.m */; };
-		39FDF176CD057CE90DB23EF0F62523EE /* SYWebBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = BD7B22992A9568C09C3FB279095EE683 /* SYWebBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4637AAF6404D4B993C8DAA9F55721F7D /* SYWebBridge+Register.h in Headers */ = {isa = PBXBuildFile; fileRef = 53085AB65E02AB8F067649D019A81FB1 /* SYWebBridge+Register.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		51813F028DDC22E36F1F246422572E7B /* Pods-SYWebview_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4277F8A1C29F31DE575CC4F38CFEF3AE /* Pods-SYWebview_Example-dummy.m */; };
-		5FEAEC93EACBF0A7187C1368FDE95B7F /* SYWebBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A0307A7D0D788CCE957BC9B058FE25 /* SYWebBridge.m */; };
-		773D4FB383A6FBEB249FA0308DE7B89E /* SYWebBridge+Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F81CD1D241D475705B01B12F13DEEDB /* SYWebBridge+Register.m */; };
-		853A6AC785F3BC4300055CB6B2DF07FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		867D165B1CF172BAFB8B1F1401162AFF /* SYWebview.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04043D507B2BEB89CFCFABB183083D4B /* SYWebview.bundle */; };
-		9F4A60618A925E1DEA2F0C8372BC981D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		9F81E88FDE0BE11B9FB402753654BED0 /* SYWebBridge+NativeToH5.m in Sources */ = {isa = PBXBuildFile; fileRef = 0440DCB4DC1F5D4E13F11D86D52A863E /* SYWebBridge+NativeToH5.m */; };
-		B2E8D16757D3186724C4E4AC9414A15F /* SYWebBridge+NativeToH5.h in Headers */ = {isa = PBXBuildFile; fileRef = 060CAA14265D6AD59970AED46B1B36BD /* SYWebBridge+NativeToH5.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA1791F92B731A67D49F10A17F852072 /* SYWebMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 6067C015DB86137AC504FB1410AB2D81 /* SYWebMsg.m */; };
-		CDB279DC2860B1A69A00A3AD9CE7E461 /* SYWebInjection.js in Resources */ = {isa = PBXBuildFile; fileRef = 991C7CB6087F2275AA5CAE4EC96BCCC2 /* SYWebInjection.js */; };
-		D53BDCDA30C0A81D7C3D85970D82F17C /* SYWebview-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 64C87EB1FEEED7671087D4FABF3356A8 /* SYWebview-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E999D61E68D16C1D343DC52E543524EB /* Pods-SYWebview_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B9A3ED0AC0882C02A4C1DB085E2D5C9 /* Pods-SYWebview_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F135F3DF665C601CFDDCB7DEDFA38B76 /* SYWebMsg.h in Headers */ = {isa = PBXBuildFile; fileRef = 900A7BDE8B1C4B4FA6D25CB59A01C39B /* SYWebMsg.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F38E718DB68A7DBE88CB697311B6AA3D /* Pods-SYWebview_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CEAAE9E154FC24ADB890891B8E1FAB2D /* Pods-SYWebview_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FB441893E3BA6BC7FF078793FE6C1128 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		10986F98E5603B3ACF01F837458F64F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		1148452E28AD2A6C7EA880538E3CA283 /* SYWebBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = A6704A023B757A20FACB22A830AFF152 /* SYWebBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21CCA78FD1DA31E2F50546329E59EEED /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B569D1C069309E8F6A21D03DBCC0E8D9 /* ja.lproj */; };
+		26BE49DB1E93B61ADB593A41CE3DD3F1 /* SYWebBridge+Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 5755906CE6B14710A41C30627E421C33 /* SYWebBridge+Register.m */; };
+		2F0569FAFE77B866C03F01E478D40C96 /* Pods-SYWebview_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B9A3ED0AC0882C02A4C1DB085E2D5C9 /* Pods-SYWebview_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36AD42CC3FB5F81FE2C1AE0693E55091 /* SYWebBridge+NativeToH5.m in Sources */ = {isa = PBXBuildFile; fileRef = B451843710DDEA26747364101A21BF3E /* SYWebBridge+NativeToH5.m */; };
+		3B9E105FAF6255DCFD443762A23996BB /* SYWebview.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04043D507B2BEB89CFCFABB183083D4B /* SYWebview.bundle */; };
+		3E48EAA9BE8000BAE6D8292724774994 /* SYWebBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCA0ACA2B8DD7ECFC7CD8AC471275F3 /* SYWebBridge.m */; };
+		53A2447EEB1D9244BE0CBC65655BA6CD /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = CF37E0752A04A36970DF0E8A9BA241A1 /* Base.lproj */; };
+		75B321EC887687BA24F13F3A4874B28E /* SYWebMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F5646253F8AD75998F74CC78E176EF /* SYWebMsg.m */; };
+		774EB3C68D17DAED96F72BB53F5627B3 /* SYWebInjection.js in Resources */ = {isa = PBXBuildFile; fileRef = 9E40ECE5E0EE38059C8F1DAD84936B3F /* SYWebInjection.js */; };
+		79161D18A46A6473F43ED4388E36EAD8 /* Pods-SYWebview_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4277F8A1C29F31DE575CC4F38CFEF3AE /* Pods-SYWebview_Example-dummy.m */; };
+		8D16CCE49E998528148264FAE8EC7817 /* Pods-SYWebview_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CEAAE9E154FC24ADB890891B8E1FAB2D /* Pods-SYWebview_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9916650B253149606455C02F50381C4B /* SYWebview-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 43893BC8342E78F16075E049C6A2A1B1 /* SYWebview-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FDDBB5C20FA5930824FA5D8BD2E4FB9 /* SYWebBridge+NativeToH5.h in Headers */ = {isa = PBXBuildFile; fileRef = F7685B7A2CF08E0461695F0E9746FAE6 /* SYWebBridge+NativeToH5.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B363AECB27556B06BAF9F5F5E259708A /* Pods-SYWebview_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2B2B4363ABD3D6D30C1FC523D4C3D /* Pods-SYWebview_Tests-dummy.m */; };
+		D745AB47A60AD7029ADC4609452B6FEE /* SYWebMsg.h in Headers */ = {isa = PBXBuildFile; fileRef = 0962EBF80587E35469A3528553B3C407 /* SYWebMsg.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB35224FC0BFBB9FD0580EB4E1D9BAF2 /* SYWebBridge+Register.h in Headers */ = {isa = PBXBuildFile; fileRef = 76576786329066B2DCF682C6E465CD69 /* SYWebBridge+Register.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD00D25E376FEC4CA72C82FF680496CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E4E303FE3E66A5905048C66D93D3A6BD /* SYWebview-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1290201D9F73EC8AA2C3BC5F856B12 /* SYWebview-dummy.m */; };
+		FA8A782EEADFA738BEBD98A62B6148EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		FF9620091C6EC552ACA8917602DE3371 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 84CE904801FC597188553E2F50A03B31 /* en.lproj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		93D196C264003BD07FC79860EDD1DE36 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6F15098C7E41C16BA1D59F0D76583942;
-			remoteInfo = "SYWebview-SYWebview";
-		};
-		E160A52756A8007B52371FB2F74815CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 28A89DAE4C0F6FFD4D9C6FF3672578A3;
-			remoteInfo = SYWebview;
-		};
-		E72EA777BB95E13A03296DC56AD33CC8 /* PBXContainerItemProxy */ = {
+		C95FEBB4C4793F85FF5EE313DEA82805 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4B8224E44F18B78EC19FFBF05991F53C;
 			remoteInfo = "Pods-SYWebview_Example";
 		};
+		D09A16BAB22177DE96C8560142D39C8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28A89DAE4C0F6FFD4D9C6FF3672578A3;
+			remoteInfo = SYWebview;
+		};
+		E5383EEAF735394399531400BC32610D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F15098C7E41C16BA1D59F0D76583942;
+			remoteInfo = "SYWebview-SYWebview";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04043D507B2BEB89CFCFABB183083D4B /* SYWebview.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SYWebview.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		0440DCB4DC1F5D4E13F11D86D52A863E /* SYWebBridge+NativeToH5.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SYWebBridge+NativeToH5.m"; path = "SYWebview/Classes/SYWebBridge+NativeToH5.m"; sourceTree = "<group>"; };
-		060CAA14265D6AD59970AED46B1B36BD /* SYWebBridge+NativeToH5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SYWebBridge+NativeToH5.h"; path = "SYWebview/Classes/SYWebBridge+NativeToH5.h"; sourceTree = "<group>"; };
-		100863A5C839F094DB2F79115D7D6FD2 /* SYWebview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SYWebview.release.xcconfig; sourceTree = "<group>"; };
-		1994F690345E375F3E9A015AE09BC847 /* ResourceBundle-SYWebview-SYWebview-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SYWebview-SYWebview-Info.plist"; sourceTree = "<group>"; };
+		04043D507B2BEB89CFCFABB183083D4B /* SYWebview.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SYWebview.bundle; path = "SYWebview-SYWebview.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0962EBF80587E35469A3528553B3C407 /* SYWebMsg.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SYWebMsg.h; path = SYWebview/Classes/SYWebMsg.h; sourceTree = "<group>"; };
 		1C0C2AD9D0883240ECF126ACCEAFF6E3 /* Pods-SYWebview_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYWebview_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1F72F1E25BB6DD5B54A38DC9566367C2 /* Pods-SYWebview_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SYWebview_Tests.modulemap"; sourceTree = "<group>"; };
-		1F8A7C116C3F8A04B6E3322E59FBC6EF /* SYWebview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SYWebview.debug.xcconfig; sourceTree = "<group>"; };
+		20EDBC24EE60D9B95572293A02CA23A6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		22DE866E7FBA37E51775AD7067034B49 /* Pods-SYWebview_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SYWebview_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		24EBD1B5045EB41AC42ED579AB27BE49 /* Pods-SYWebview_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYWebview_Example.release.xcconfig"; sourceTree = "<group>"; };
-		313CA8BB9EE593F43660A7A21E59BCC0 /* SYWebview-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYWebview-prefix.pch"; sourceTree = "<group>"; };
-		32103794C882567C1E9CB2008CAE7AC2 /* SYWebview.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SYWebview.podspec; sourceTree = "<group>"; tabWidth = 2; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3547B6D1B94F70CCE5054FAD9C759839 /* Pods-SYWebview_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SYWebview_Example.modulemap"; sourceTree = "<group>"; };
 		3FF2B2B4363ABD3D6D30C1FC523D4C3D /* Pods-SYWebview_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SYWebview_Tests-dummy.m"; sourceTree = "<group>"; };
 		4277F8A1C29F31DE575CC4F38CFEF3AE /* Pods-SYWebview_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SYWebview_Example-dummy.m"; sourceTree = "<group>"; };
-		43FB02046317AF80C3374A36E882873F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		53085AB65E02AB8F067649D019A81FB1 /* SYWebBridge+Register.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SYWebBridge+Register.h"; path = "SYWebview/Classes/SYWebBridge+Register.h"; sourceTree = "<group>"; };
+		43893BC8342E78F16075E049C6A2A1B1 /* SYWebview-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYWebview-umbrella.h"; sourceTree = "<group>"; };
 		53AE1B8B04DEB5449343469DC37A6A35 /* Pods-SYWebview_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYWebview_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		57534C6D09B1B63C7E04DC5B05B746AE /* SYWebview-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SYWebview-dummy.m"; sourceTree = "<group>"; };
+		5755906CE6B14710A41C30627E421C33 /* SYWebBridge+Register.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SYWebBridge+Register.m"; path = "SYWebview/Classes/SYWebBridge+Register.m"; sourceTree = "<group>"; };
+		5DCA0ACA2B8DD7ECFC7CD8AC471275F3 /* SYWebBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SYWebBridge.m; path = SYWebview/Classes/SYWebBridge.m; sourceTree = "<group>"; };
 		600A07D8628285A87BDF3B1C9BB75ED0 /* Pods-SYWebview_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SYWebview_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6067C015DB86137AC504FB1410AB2D81 /* SYWebMsg.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SYWebMsg.m; path = SYWebview/Classes/SYWebMsg.m; sourceTree = "<group>"; };
 		64702C28B2CE35379FFAA6882C36C2BC /* Pods-SYWebview_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SYWebview_Tests-Info.plist"; sourceTree = "<group>"; };
-		64C87EB1FEEED7671087D4FABF3356A8 /* SYWebview-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYWebview-umbrella.h"; sourceTree = "<group>"; };
-		6E95E27FC41ACBA0EEF6BE3D1328BBB9 /* SYWebview.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SYWebview.modulemap; sourceTree = "<group>"; };
+		68FED571387252048E214B249F6A1F22 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		6F5BCED7E971FF42CC466B392513F32C /* Pods-SYWebview_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SYWebview_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6F81CD1D241D475705B01B12F13DEEDB /* SYWebBridge+Register.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SYWebBridge+Register.m"; path = "SYWebview/Classes/SYWebBridge+Register.m"; sourceTree = "<group>"; };
-		900A7BDE8B1C4B4FA6D25CB59A01C39B /* SYWebMsg.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SYWebMsg.h; path = SYWebview/Classes/SYWebMsg.h; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		76576786329066B2DCF682C6E465CD69 /* SYWebBridge+Register.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SYWebBridge+Register.h"; path = "SYWebview/Classes/SYWebBridge+Register.h"; sourceTree = "<group>"; };
+		823E974BA7C4ABED8CCD733D183AA249 /* SYWebview-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SYWebview-Info.plist"; sourceTree = "<group>"; };
+		84CE904801FC597188553E2F50A03B31 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = SYWebview/Assets/en.lproj; sourceTree = "<group>"; };
+		91F5646253F8AD75998F74CC78E176EF /* SYWebMsg.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SYWebMsg.m; path = SYWebview/Classes/SYWebMsg.m; sourceTree = "<group>"; };
 		95AB4EA3C50AC093EA58EB8ED5A8DB58 /* Pods-SYWebview_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SYWebview_Example-Info.plist"; sourceTree = "<group>"; };
-		991C7CB6087F2275AA5CAE4EC96BCCC2 /* SYWebInjection.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = SYWebInjection.js; path = SYWebview/Assets/SYWebInjection.js; sourceTree = "<group>"; };
 		9974EC05FFE144AAEC1AF1952A9085E9 /* Pods-SYWebview_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYWebview_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9B9A3ED0AC0882C02A4C1DB085E2D5C9 /* Pods-SYWebview_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SYWebview_Tests-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A444052D63CEEE5AD171B000D161D4AA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B2A0307A7D0D788CCE957BC9B058FE25 /* SYWebBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SYWebBridge.m; path = SYWebview/Classes/SYWebBridge.m; sourceTree = "<group>"; };
-		BD7B22992A9568C09C3FB279095EE683 /* SYWebBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SYWebBridge.h; path = SYWebview/Classes/SYWebBridge.h; sourceTree = "<group>"; };
-		CAE6093195DDE91A2A536AA7CFC27C6C /* Pods_SYWebview_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SYWebview_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E40ECE5E0EE38059C8F1DAD84936B3F /* SYWebInjection.js */ = {isa = PBXFileReference; includeInIndex = 1; name = SYWebInjection.js; path = SYWebview/Assets/SYWebInjection.js; sourceTree = "<group>"; };
+		A6704A023B757A20FACB22A830AFF152 /* SYWebBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SYWebBridge.h; path = SYWebview/Classes/SYWebBridge.h; sourceTree = "<group>"; };
+		A732536E5DB373B557FC421CDAF86EC0 /* SYWebview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SYWebview.debug.xcconfig; sourceTree = "<group>"; };
+		AA1290201D9F73EC8AA2C3BC5F856B12 /* SYWebview-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SYWebview-dummy.m"; sourceTree = "<group>"; };
+		AF278EBD3A113FA2F96F7BE16422194C /* SYWebview.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SYWebview.modulemap; sourceTree = "<group>"; };
+		B0FE9CFA57B6DF33611D6FF1568F974B /* SYWebview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SYWebview.release.xcconfig; sourceTree = "<group>"; };
+		B451843710DDEA26747364101A21BF3E /* SYWebBridge+NativeToH5.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SYWebBridge+NativeToH5.m"; path = "SYWebview/Classes/SYWebBridge+NativeToH5.m"; sourceTree = "<group>"; };
+		B569D1C069309E8F6A21D03DBCC0E8D9 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = SYWebview/Assets/ja.lproj; sourceTree = "<group>"; };
+		CAE6093195DDE91A2A536AA7CFC27C6C /* Pods_SYWebview_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SYWebview_Example.framework; path = "Pods-SYWebview_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAAE9E154FC24ADB890891B8E1FAB2D /* Pods-SYWebview_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SYWebview_Example-umbrella.h"; sourceTree = "<group>"; };
-		D3029A3DC50002DC4516007ECE43C7E2 /* SYWebview-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SYWebview-Info.plist"; sourceTree = "<group>"; };
+		CF37E0752A04A36970DF0E8A9BA241A1 /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = Base.lproj; path = SYWebview/Assets/Base.lproj; sourceTree = "<group>"; };
+		D50D668DDD8A99D9E60051A94D5550FB /* SYWebview-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYWebview-prefix.pch"; sourceTree = "<group>"; };
 		D66590360D82CDBD21767004C63879FC /* Pods-SYWebview_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SYWebview_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		DBB30326E29F805CF75A8EE3FA82A609 /* Pods_SYWebview_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SYWebview_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBB30326E29F805CF75A8EE3FA82A609 /* Pods_SYWebview_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SYWebview_Tests.framework; path = "Pods-SYWebview_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0AD540F49854506BC3B055A94BCE4F2 /* SYWebview.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SYWebview.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		EF93FA8CA54FF8A1CBF014FD53DDB68B /* ResourceBundle-SYWebview-SYWebview-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SYWebview-SYWebview-Info.plist"; sourceTree = "<group>"; };
 		F60349A78F4215110D6A1F69C3BABD1E /* Pods-SYWebview_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SYWebview_Example-frameworks.sh"; sourceTree = "<group>"; };
-		F8A9806F6C8A3E13ADD0CB7D7B99A893 /* SYWebview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SYWebview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7685B7A2CF08E0461695F0E9746FAE6 /* SYWebBridge+NativeToH5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SYWebBridge+NativeToH5.h"; path = "SYWebview/Classes/SYWebBridge+NativeToH5.h"; sourceTree = "<group>"; };
+		F8A9806F6C8A3E13ADD0CB7D7B99A893 /* SYWebview.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SYWebview.framework; path = SYWebview.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1EB127F07678FFB2F97318BA058922CA /* Frameworks */ = {
+		8B536B43BCC7B000E4CE8327CCD1067C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10986F98E5603B3ACF01F837458F64F4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		503F048BEF14012A29747285CA4F82F7 /* Frameworks */ = {
+		8B85B35FFA2E04ACD11FF2219BD10F04 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB441893E3BA6BC7FF078793FE6C1128 /* Foundation.framework in Frameworks */,
+				DD00D25E376FEC4CA72C82FF680496CC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B8A80D7CBF4C47CD7B9225C565B83FCF /* Frameworks */ = {
+		BF2E5CFC53C9BF8CA801C57EEA60E0D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				853A6AC785F3BC4300055CB6B2DF07FD /* Foundation.framework in Frameworks */,
+				FA8A782EEADFA738BEBD98A62B6148EF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FFF3566B861A038E2DB2AC75A7FA67C7 /* Frameworks */ = {
+		D874D53CBAC57DCE65533227A9C129D4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F4A60618A925E1DEA2F0C8372BC981D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F614D865EB7D6E976EF38E2BA85635E /* Pod */ = {
+		217C7C8377BD0C4525E78006F9A3AEE7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				43FB02046317AF80C3374A36E882873F /* LICENSE */,
-				A444052D63CEEE5AD171B000D161D4AA /* README.md */,
-				32103794C882567C1E9CB2008CAE7AC2 /* SYWebview.podspec */,
+				CF37E0752A04A36970DF0E8A9BA241A1 /* Base.lproj */,
+				84CE904801FC597188553E2F50A03B31 /* en.lproj */,
+				B569D1C069309E8F6A21D03DBCC0E8D9 /* ja.lproj */,
+				9E40ECE5E0EE38059C8F1DAD84936B3F /* SYWebInjection.js */,
 			);
-			name = Pod;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2A774C786FB5F6F37AAD6D1684733A8E /* SYWebview */ = {
+			isa = PBXGroup;
+			children = (
+				A6704A023B757A20FACB22A830AFF152 /* SYWebBridge.h */,
+				5DCA0ACA2B8DD7ECFC7CD8AC471275F3 /* SYWebBridge.m */,
+				F7685B7A2CF08E0461695F0E9746FAE6 /* SYWebBridge+NativeToH5.h */,
+				B451843710DDEA26747364101A21BF3E /* SYWebBridge+NativeToH5.m */,
+				76576786329066B2DCF682C6E465CD69 /* SYWebBridge+Register.h */,
+				5755906CE6B14710A41C30627E421C33 /* SYWebBridge+Register.m */,
+				0962EBF80587E35469A3528553B3C407 /* SYWebMsg.h */,
+				91F5646253F8AD75998F74CC78E176EF /* SYWebMsg.m */,
+				6800D4CCC1E8341CE3FCF52D87F56D8F /* Pod */,
+				217C7C8377BD0C4525E78006F9A3AEE7 /* Resources */,
+				AB68F9AA117D824FF9CBEFC45A00F606 /* Support Files */,
+			);
+			name = SYWebview;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		3E2FE887368A343C97D61B7EDCCA118E /* Targets Support Files */ = {
@@ -169,6 +195,14 @@
 			path = "Target Support Files/Pods-SYWebview_Example";
 			sourceTree = "<group>";
 		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		58B7E69540E1D21BD53C1FE789370963 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,7 +217,7 @@
 		5BDC3AA72B625D375BB84DD8E13B8829 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8CBF2FA638071BB9D52DCAE7A2515290 /* SYWebview */,
+				2A774C786FB5F6F37AAD6D1684733A8E /* SYWebview */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -204,55 +238,30 @@
 			path = "Target Support Files/Pods-SYWebview_Tests";
 			sourceTree = "<group>";
 		};
-		67A584AFD0256F58F444B6C853F1905A /* Resources */ = {
+		6800D4CCC1E8341CE3FCF52D87F56D8F /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				991C7CB6087F2275AA5CAE4EC96BCCC2 /* SYWebInjection.js */,
+				68FED571387252048E214B249F6A1F22 /* LICENSE */,
+				20EDBC24EE60D9B95572293A02CA23A6 /* README.md */,
+				E0AD540F49854506BC3B055A94BCE4F2 /* SYWebview.podspec */,
 			);
-			name = Resources;
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		816E5C7CD2CA2552BE0A3E292462CD88 /* Support Files */ = {
+		AB68F9AA117D824FF9CBEFC45A00F606 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1994F690345E375F3E9A015AE09BC847 /* ResourceBundle-SYWebview-SYWebview-Info.plist */,
-				6E95E27FC41ACBA0EEF6BE3D1328BBB9 /* SYWebview.modulemap */,
-				57534C6D09B1B63C7E04DC5B05B746AE /* SYWebview-dummy.m */,
-				D3029A3DC50002DC4516007ECE43C7E2 /* SYWebview-Info.plist */,
-				313CA8BB9EE593F43660A7A21E59BCC0 /* SYWebview-prefix.pch */,
-				64C87EB1FEEED7671087D4FABF3356A8 /* SYWebview-umbrella.h */,
-				1F8A7C116C3F8A04B6E3322E59FBC6EF /* SYWebview.debug.xcconfig */,
-				100863A5C839F094DB2F79115D7D6FD2 /* SYWebview.release.xcconfig */,
+				EF93FA8CA54FF8A1CBF014FD53DDB68B /* ResourceBundle-SYWebview-SYWebview-Info.plist */,
+				AF278EBD3A113FA2F96F7BE16422194C /* SYWebview.modulemap */,
+				AA1290201D9F73EC8AA2C3BC5F856B12 /* SYWebview-dummy.m */,
+				823E974BA7C4ABED8CCD733D183AA249 /* SYWebview-Info.plist */,
+				D50D668DDD8A99D9E60051A94D5550FB /* SYWebview-prefix.pch */,
+				43893BC8342E78F16075E049C6A2A1B1 /* SYWebview-umbrella.h */,
+				A732536E5DB373B557FC421CDAF86EC0 /* SYWebview.debug.xcconfig */,
+				B0FE9CFA57B6DF33611D6FF1568F974B /* SYWebview.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/SYWebview";
-			sourceTree = "<group>";
-		};
-		8CBF2FA638071BB9D52DCAE7A2515290 /* SYWebview */ = {
-			isa = PBXGroup;
-			children = (
-				BD7B22992A9568C09C3FB279095EE683 /* SYWebBridge.h */,
-				B2A0307A7D0D788CCE957BC9B058FE25 /* SYWebBridge.m */,
-				060CAA14265D6AD59970AED46B1B36BD /* SYWebBridge+NativeToH5.h */,
-				0440DCB4DC1F5D4E13F11D86D52A863E /* SYWebBridge+NativeToH5.m */,
-				53085AB65E02AB8F067649D019A81FB1 /* SYWebBridge+Register.h */,
-				6F81CD1D241D475705B01B12F13DEEDB /* SYWebBridge+Register.m */,
-				900A7BDE8B1C4B4FA6D25CB59A01C39B /* SYWebMsg.h */,
-				6067C015DB86137AC504FB1410AB2D81 /* SYWebMsg.m */,
-				1F614D865EB7D6E976EF38E2BA85635E /* Pod */,
-				67A584AFD0256F58F444B6C853F1905A /* Resources */,
-				816E5C7CD2CA2552BE0A3E292462CD88 /* Support Files */,
-			);
-			name = SYWebview;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -269,7 +278,7 @@
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -277,31 +286,31 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		28C91D520D0033EDE4C6683AC9312EC7 /* Headers */ = {
+		51B6D5057166516070380450ED5CECBF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F38E718DB68A7DBE88CB697311B6AA3D /* Pods-SYWebview_Example-umbrella.h in Headers */,
+				2F0569FAFE77B866C03F01E478D40C96 /* Pods-SYWebview_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		48D27BD15D941B5E9692C2368C2281B3 /* Headers */ = {
+		57318A078E8214289FB8079D8889ABA9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2E8D16757D3186724C4E4AC9414A15F /* SYWebBridge+NativeToH5.h in Headers */,
-				4637AAF6404D4B993C8DAA9F55721F7D /* SYWebBridge+Register.h in Headers */,
-				39FDF176CD057CE90DB23EF0F62523EE /* SYWebBridge.h in Headers */,
-				F135F3DF665C601CFDDCB7DEDFA38B76 /* SYWebMsg.h in Headers */,
-				D53BDCDA30C0A81D7C3D85970D82F17C /* SYWebview-umbrella.h in Headers */,
+				9FDDBB5C20FA5930824FA5D8BD2E4FB9 /* SYWebBridge+NativeToH5.h in Headers */,
+				DB35224FC0BFBB9FD0580EB4E1D9BAF2 /* SYWebBridge+Register.h in Headers */,
+				1148452E28AD2A6C7EA880538E3CA283 /* SYWebBridge.h in Headers */,
+				D745AB47A60AD7029ADC4609452B6FEE /* SYWebMsg.h in Headers */,
+				9916650B253149606455C02F50381C4B /* SYWebview-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		64B3357F0DA33E118FB143CA3D11F76B /* Headers */ = {
+		62F3B3B4BCE9A2BA8D9A1A4201B27BA0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E999D61E68D16C1D343DC52E543524EB /* Pods-SYWebview_Tests-umbrella.h in Headers */,
+				8D16CCE49E998528148264FAE8EC7817 /* Pods-SYWebview_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,17 +319,17 @@
 /* Begin PBXNativeTarget section */
 		28A89DAE4C0F6FFD4D9C6FF3672578A3 /* SYWebview */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1864460A4DFBDF4F7E3108F781162882 /* Build configuration list for PBXNativeTarget "SYWebview" */;
+			buildConfigurationList = E7004C80850DC15648ADCC2D62AAC2AA /* Build configuration list for PBXNativeTarget "SYWebview" */;
 			buildPhases = (
-				48D27BD15D941B5E9692C2368C2281B3 /* Headers */,
-				0E0534CD6C65205BDAD3DDEDC3B33811 /* Sources */,
-				503F048BEF14012A29747285CA4F82F7 /* Frameworks */,
-				332F3B51865C4D03741A95EB9E11270B /* Resources */,
+				57318A078E8214289FB8079D8889ABA9 /* Headers */,
+				BDFED6C93862E2DF56EF1D4C39288DBD /* Sources */,
+				BF2E5CFC53C9BF8CA801C57EEA60E0D9 /* Frameworks */,
+				486E7AA1C8CE5305F4CCD3370DCA462A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FDD414CE5D60F26A941BB3B9785E6A18 /* PBXTargetDependency */,
+				58327F290C63776FAF2DB49362672D37 /* PBXTargetDependency */,
 			);
 			name = SYWebview;
 			productName = SYWebview;
@@ -329,17 +338,17 @@
 		};
 		4B8224E44F18B78EC19FFBF05991F53C /* Pods-SYWebview_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F1EEDF36F40E24EB4884FFA053BA2D49 /* Build configuration list for PBXNativeTarget "Pods-SYWebview_Example" */;
+			buildConfigurationList = 6CDF98714A23056A7EE4D7B6B3975A7B /* Build configuration list for PBXNativeTarget "Pods-SYWebview_Example" */;
 			buildPhases = (
-				28C91D520D0033EDE4C6683AC9312EC7 /* Headers */,
-				CFF82FCA766BDE9270CCD1E44B4A5AA7 /* Sources */,
-				FFF3566B861A038E2DB2AC75A7FA67C7 /* Frameworks */,
-				6E53686D214624905B557191F87A3FC5 /* Resources */,
+				62F3B3B4BCE9A2BA8D9A1A4201B27BA0 /* Headers */,
+				2C4AA44266175606CF95EE6F54BAE779 /* Sources */,
+				8B536B43BCC7B000E4CE8327CCD1067C /* Frameworks */,
+				55C888B9EA7DF74BAE11267144E521F0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				28F69165B242D00B709BDD00C88946E1 /* PBXTargetDependency */,
+				5E12EC7F7AD4F1151725DF525E4DA675 /* PBXTargetDependency */,
 			);
 			name = "Pods-SYWebview_Example";
 			productName = "Pods-SYWebview_Example";
@@ -348,11 +357,11 @@
 		};
 		6F15098C7E41C16BA1D59F0D76583942 /* SYWebview-SYWebview */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1C5557DF1AB5812751E7FAF576FEBEFD /* Build configuration list for PBXNativeTarget "SYWebview-SYWebview" */;
+			buildConfigurationList = B1DAC381D20100B8E86CFF2FAA5575F3 /* Build configuration list for PBXNativeTarget "SYWebview-SYWebview" */;
 			buildPhases = (
-				9896C0A9DEAFE0DD061C51DE6A6E941B /* Sources */,
-				1EB127F07678FFB2F97318BA058922CA /* Frameworks */,
-				D0123EB9BABAA1F1EC45229359AE1B61 /* Resources */,
+				BB2A4D8563A62AE9260FD8E4CF37D340 /* Sources */,
+				D874D53CBAC57DCE65533227A9C129D4 /* Frameworks */,
+				611B94ABEB65F1B7B1E0C8035EC17C86 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -365,17 +374,17 @@
 		};
 		9C2203429A43D85BF1AD769DEDF6AF4C /* Pods-SYWebview_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A2918FF26CDFAC10FD80FF5D5282131 /* Build configuration list for PBXNativeTarget "Pods-SYWebview_Tests" */;
+			buildConfigurationList = 626DAF7F70F6C76CA85DEDAD7F3E448E /* Build configuration list for PBXNativeTarget "Pods-SYWebview_Tests" */;
 			buildPhases = (
-				64B3357F0DA33E118FB143CA3D11F76B /* Headers */,
-				AE0E66B7C19194806AF04D39B24C448A /* Sources */,
-				B8A80D7CBF4C47CD7B9225C565B83FCF /* Frameworks */,
-				1EF74922D94E0AFADF1F2D0ADB5BC33E /* Resources */,
+				51B6D5057166516070380450ED5CECBF /* Headers */,
+				C33600AC46DE37DEE1C99689072CCF45 /* Sources */,
+				8B85B35FFA2E04ACD11FF2219BD10F04 /* Frameworks */,
+				B15E48F675D3D5717813BAA280EE8447 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				56C3E1CF428AA9E28744377EA721E067 /* PBXTargetDependency */,
+				322B631E3B917719041DF55FCB405195 /* PBXTargetDependency */,
 			);
 			name = "Pods-SYWebview_Tests";
 			productName = "Pods-SYWebview_Tests";
@@ -413,121 +422,106 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1EF74922D94E0AFADF1F2D0ADB5BC33E /* Resources */ = {
+		486E7AA1C8CE5305F4CCD3370DCA462A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B9E105FAF6255DCFD443762A23996BB /* SYWebview.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55C888B9EA7DF74BAE11267144E521F0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		332F3B51865C4D03741A95EB9E11270B /* Resources */ = {
+		611B94ABEB65F1B7B1E0C8035EC17C86 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				867D165B1CF172BAFB8B1F1401162AFF /* SYWebview.bundle in Resources */,
+				53A2447EEB1D9244BE0CBC65655BA6CD /* Base.lproj in Resources */,
+				FF9620091C6EC552ACA8917602DE3371 /* en.lproj in Resources */,
+				21CCA78FD1DA31E2F50546329E59EEED /* ja.lproj in Resources */,
+				774EB3C68D17DAED96F72BB53F5627B3 /* SYWebInjection.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E53686D214624905B557191F87A3FC5 /* Resources */ = {
+		B15E48F675D3D5717813BAA280EE8447 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D0123EB9BABAA1F1EC45229359AE1B61 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CDB279DC2860B1A69A00A3AD9CE7E461 /* SYWebInjection.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0E0534CD6C65205BDAD3DDEDC3B33811 /* Sources */ = {
+		2C4AA44266175606CF95EE6F54BAE779 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F81E88FDE0BE11B9FB402753654BED0 /* SYWebBridge+NativeToH5.m in Sources */,
-				773D4FB383A6FBEB249FA0308DE7B89E /* SYWebBridge+Register.m in Sources */,
-				5FEAEC93EACBF0A7187C1368FDE95B7F /* SYWebBridge.m in Sources */,
-				BA1791F92B731A67D49F10A17F852072 /* SYWebMsg.m in Sources */,
-				0E03276CEA82DD6B8BA745FCED7E240D /* SYWebview-dummy.m in Sources */,
+				79161D18A46A6473F43ED4388E36EAD8 /* Pods-SYWebview_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9896C0A9DEAFE0DD061C51DE6A6E941B /* Sources */ = {
+		BB2A4D8563A62AE9260FD8E4CF37D340 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE0E66B7C19194806AF04D39B24C448A /* Sources */ = {
+		BDFED6C93862E2DF56EF1D4C39288DBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04A5D572A2BCEED0DE2CD99753CC1C1A /* Pods-SYWebview_Tests-dummy.m in Sources */,
+				36AD42CC3FB5F81FE2C1AE0693E55091 /* SYWebBridge+NativeToH5.m in Sources */,
+				26BE49DB1E93B61ADB593A41CE3DD3F1 /* SYWebBridge+Register.m in Sources */,
+				3E48EAA9BE8000BAE6D8292724774994 /* SYWebBridge.m in Sources */,
+				75B321EC887687BA24F13F3A4874B28E /* SYWebMsg.m in Sources */,
+				E4E303FE3E66A5905048C66D93D3A6BD /* SYWebview-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFF82FCA766BDE9270CCD1E44B4A5AA7 /* Sources */ = {
+		C33600AC46DE37DEE1C99689072CCF45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51813F028DDC22E36F1F246422572E7B /* Pods-SYWebview_Example-dummy.m in Sources */,
+				B363AECB27556B06BAF9F5F5E259708A /* Pods-SYWebview_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		28F69165B242D00B709BDD00C88946E1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SYWebview;
-			target = 28A89DAE4C0F6FFD4D9C6FF3672578A3 /* SYWebview */;
-			targetProxy = E160A52756A8007B52371FB2F74815CA /* PBXContainerItemProxy */;
-		};
-		56C3E1CF428AA9E28744377EA721E067 /* PBXTargetDependency */ = {
+		322B631E3B917719041DF55FCB405195 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-SYWebview_Example";
 			target = 4B8224E44F18B78EC19FFBF05991F53C /* Pods-SYWebview_Example */;
-			targetProxy = E72EA777BB95E13A03296DC56AD33CC8 /* PBXContainerItemProxy */;
+			targetProxy = C95FEBB4C4793F85FF5EE313DEA82805 /* PBXContainerItemProxy */;
 		};
-		FDD414CE5D60F26A941BB3B9785E6A18 /* PBXTargetDependency */ = {
+		58327F290C63776FAF2DB49362672D37 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "SYWebview-SYWebview";
 			target = 6F15098C7E41C16BA1D59F0D76583942 /* SYWebview-SYWebview */;
-			targetProxy = 93D196C264003BD07FC79860EDD1DE36 /* PBXContainerItemProxy */;
+			targetProxy = E5383EEAF735394399531400BC32610D /* PBXContainerItemProxy */;
+		};
+		5E12EC7F7AD4F1151725DF525E4DA675 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SYWebview;
+			target = 28A89DAE4C0F6FFD4D9C6FF3672578A3 /* SYWebview */;
+			targetProxy = D09A16BAB22177DE96C8560142D39C8B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		19F69EBA7D2A43CB41A1F5540B43D5AF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 100863A5C839F094DB2F79115D7D6FD2 /* SYWebview.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SYWebview";
-				IBSC_MODULE = SYWebview;
-				INFOPLIST_FILE = "Target Support Files/SYWebview/ResourceBundle-SYWebview-SYWebview-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = SYWebview;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		27E09A1B26ACED59B9C7230F337F2A04 /* Release */ = {
+		35FB73ED8ECAB1514CE8E31DF19921A4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24EBD1B5045EB41AC42ED579AB27BE49 /* Pods-SYWebview_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -556,29 +550,44 @@
 			};
 			name = Release;
 		};
-		5480ECB897A3546CA7B42F5231ED3C9E /* Debug */ = {
+		3999690F5E35C2838E62FEB6DD0715D3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F8A7C116C3F8A04B6E3322E59FBC6EF /* SYWebview.debug.xcconfig */;
+			baseConfigurationReference = 53AE1B8B04DEB5449343469DC37A6A35 /* Pods-SYWebview_Tests.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SYWebview";
-				IBSC_MODULE = SYWebview;
-				INFOPLIST_FILE = "Target Support Files/SYWebview/ResourceBundle-SYWebview-SYWebview-Info.plist";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SYWebview_Tests/Pods-SYWebview_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = SYWebview;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SYWebview_Tests/Pods-SYWebview_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		6F47CAF2ADC82E3E5D82479D47DA6B6F /* Debug */ = {
+		61A0029DC4078F737AB36F872FFCF088 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9974EC05FFE144AAEC1AF1952A9085E9 /* Pods-SYWebview_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -606,12 +615,27 @@
 			};
 			name = Debug;
 		};
-		8C8CABF77F3215FFEC84C4E885DB32F5 /* Debug */ = {
+		87E550F47F006BCB4222655D7089649F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A732536E5DB373B557FC421CDAF86EC0 /* SYWebview.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SYWebview";
+				IBSC_MODULE = SYWebview;
+				INFOPLIST_FILE = "Target Support Files/SYWebview/ResourceBundle-SYWebview-SYWebview-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = SYWebview;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		8D8F433043CECD562F5266913D4DB571 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1C0C2AD9D0883240ECF126ACCEAFF6E3 /* Pods-SYWebview_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -639,7 +663,68 @@
 			};
 			name = Debug;
 		};
-		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
+		B0F8AF3A88896BB461ABFA4EC839FD44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A732536E5DB373B557FC421CDAF86EC0 /* SYWebview.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SYWebview/SYWebview-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SYWebview/SYWebview-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SYWebview/SYWebview.modulemap";
+				PRODUCT_MODULE_NAME = SYWebview;
+				PRODUCT_NAME = SYWebview;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B2B2F76F66E456A42EBF75C992CAA29E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0FE9CFA57B6DF33611D6FF1568F974B /* SYWebview.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SYWebview/SYWebview-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SYWebview/SYWebview-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SYWebview/SYWebview.modulemap";
+				PRODUCT_MODULE_NAME = SYWebview;
+				PRODUCT_NAME = SYWebview;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C14E932D4C3EFCC589F7DEABCEC18F22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -665,6 +750,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -692,13 +778,30 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		916E0404255105F480DC4950B7625F7A /* Debug */ = {
+		C38F78444911533D7F7D653C496A0BDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0FE9CFA57B6DF33611D6FF1568F974B /* SYWebview.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SYWebview";
+				IBSC_MODULE = SYWebview;
+				INFOPLIST_FILE = "Target Support Files/SYWebview/ResourceBundle-SYWebview-SYWebview-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = SYWebview;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		EF3BAAA889B17377BE8F3254633FA0A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -724,6 +827,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -762,147 +866,50 @@
 			};
 			name = Debug;
 		};
-		B3B64C8FC55C454DF3259E18743A2EF5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 100863A5C839F094DB2F79115D7D6FD2 /* SYWebview.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SYWebview/SYWebview-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SYWebview/SYWebview-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SYWebview/SYWebview.modulemap";
-				PRODUCT_MODULE_NAME = SYWebview;
-				PRODUCT_NAME = SYWebview;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CA50F269476FFA85EC68E0EE8D30A023 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F8A7C116C3F8A04B6E3322E59FBC6EF /* SYWebview.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SYWebview/SYWebview-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SYWebview/SYWebview-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SYWebview/SYWebview.modulemap";
-				PRODUCT_MODULE_NAME = SYWebview;
-				PRODUCT_NAME = SYWebview;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D9479B4D1079B57D8D5DB819CF86EE0F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53AE1B8B04DEB5449343469DC37A6A35 /* Pods-SYWebview_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SYWebview_Tests/Pods-SYWebview_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SYWebview_Tests/Pods-SYWebview_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1864460A4DFBDF4F7E3108F781162882 /* Build configuration list for PBXNativeTarget "SYWebview" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CA50F269476FFA85EC68E0EE8D30A023 /* Debug */,
-				B3B64C8FC55C454DF3259E18743A2EF5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1C5557DF1AB5812751E7FAF576FEBEFD /* Build configuration list for PBXNativeTarget "SYWebview-SYWebview" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5480ECB897A3546CA7B42F5231ED3C9E /* Debug */,
-				19F69EBA7D2A43CB41A1F5540B43D5AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				916E0404255105F480DC4950B7625F7A /* Debug */,
-				8F17DC3A99F99FBAD606CE6963886315 /* Release */,
+				EF3BAAA889B17377BE8F3254633FA0A7 /* Debug */,
+				C14E932D4C3EFCC589F7DEABCEC18F22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A2918FF26CDFAC10FD80FF5D5282131 /* Build configuration list for PBXNativeTarget "Pods-SYWebview_Tests" */ = {
+		626DAF7F70F6C76CA85DEDAD7F3E448E /* Build configuration list for PBXNativeTarget "Pods-SYWebview_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8C8CABF77F3215FFEC84C4E885DB32F5 /* Debug */,
-				D9479B4D1079B57D8D5DB819CF86EE0F /* Release */,
+				8D8F433043CECD562F5266913D4DB571 /* Debug */,
+				3999690F5E35C2838E62FEB6DD0715D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F1EEDF36F40E24EB4884FFA053BA2D49 /* Build configuration list for PBXNativeTarget "Pods-SYWebview_Example" */ = {
+		6CDF98714A23056A7EE4D7B6B3975A7B /* Build configuration list for PBXNativeTarget "Pods-SYWebview_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6F47CAF2ADC82E3E5D82479D47DA6B6F /* Debug */,
-				27E09A1B26ACED59B9C7230F337F2A04 /* Release */,
+				61A0029DC4078F737AB36F872FFCF088 /* Debug */,
+				35FB73ED8ECAB1514CE8E31DF19921A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1DAC381D20100B8E86CFF2FAA5575F3 /* Build configuration list for PBXNativeTarget "SYWebview-SYWebview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87E550F47F006BCB4222655D7089649F /* Debug */,
+				C38F78444911533D7F7D653C496A0BDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7004C80850DC15648ADCC2D62AAC2AA /* Build configuration list for PBXNativeTarget "SYWebview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0F8AF3A88896BB461ABFA4EC839FD44 /* Debug */,
+				B2B2F76F66E456A42EBF75C992CAA29E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
