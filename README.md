@@ -66,7 +66,12 @@ SYWebMsg *msg = [SYWebMsg initwithKey:@"test" param:@{@"wahaha":@"hahaha"} webvi
 }];
 ```
 ### 2.js部分
-#### 2.1 sy_web_bridge是处理消息的变量 
+#### 2.1 初始化
+```
+//sy_web_bridge是处理消息的变量 
+var sy_web_bridge = SYWebInjection();
+sy_web_bridge.initWebBridge();
+```
 
 #### 2.2 js给native发送消息
 ```

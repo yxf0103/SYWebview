@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,weak)id<SYWebBridgeDelegate> delegate;
 @property (nonatomic,weak,readonly)WKWebView *webview;
+@property (nonatomic,strong,readonly)id jsBridge;
 ///展示日志，默认为YES
 @property (nonatomic,assign)BOOL showLog;
 

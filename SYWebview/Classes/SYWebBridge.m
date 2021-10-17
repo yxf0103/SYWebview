@@ -14,6 +14,7 @@ static NSString *const sy_msg_from_web = @"syMsgFromH5";
 @interface SYWebBridge ()<WKScriptMessageHandler>
 
 @property (nonatomic,weak)WKWebView *webview;
+@property (nonatomic,strong)id jsBridge;
 
 @end
 
@@ -68,6 +69,10 @@ static NSString *const sy_msg_from_web = @"syMsgFromH5";
     if ([message.name isEqualToString:sy_msg_from_web] && [message.body isKindOfClass:NSDictionary.class]) {
         NSDictionary *params = message.body;
         SYWebMsg *msgModel = [SYWebMsg initWithMsg:params webview:_webview];
+        if ([msgModel.key isEqualToString:@"sy_web_bridge_init"]) {
+            _jsBridge = msgModel.params[@"bridge"];
+            return;
+        }
         //native发送消息到h5收到的回调
         if ([msgModel.key isEqualToString:@"sy_nativeCallback"]) {
             [self handleCallbackMsg:msgModel];

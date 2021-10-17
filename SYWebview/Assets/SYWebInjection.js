@@ -1,7 +1,8 @@
-var sy_web_bridge = SYWebInjection();
 
 function nativeSendToH5(params) {
-    sy_web_bridge.syRealnativeSendToH5(params);
+    var sy_web_bridge = params["sy_bridge"];
+    var realParams = params["sy_bridge_params"];
+    sy_web_bridge.syRealnativeSendToH5(realParams);
 }
 
 function SYWebInjection() {
@@ -12,6 +13,11 @@ function SYWebInjection() {
     obj.sy_reg_dic = {};
     obj.uniqueId = 1;
 
+    function initWebBridge(){
+        var msgid = this.createMsgId();
+        this.syRealH5SendToNative(msgid,"sy_web_bridge_init",{"bridge":this});
+    }
+    
     function logInNative(params) {
         var msgid = this.createMsgId()
         this.syRealH5SendToNative(msgid, "sy_web_log", params);
@@ -113,6 +119,7 @@ function SYWebInjection() {
         return true;
     }
     
+    obj.initWebBridge = initWebBridge;
     obj.logInNative = logInNative;
     obj.h5SendToNative = h5SendToNative;
     obj.syRealnativeSendToH5 = syRealnativeSendToH5;

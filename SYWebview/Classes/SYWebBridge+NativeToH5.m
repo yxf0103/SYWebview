@@ -44,7 +44,7 @@ const char msg_dic = 'm';
     nativeBack.success = succback;
     nativeBack.fail = failback;
     self.msgDic[msg.msgId] = nativeBack;
-    [msg send];
+    [msg sendToBridge:self.jsBridge];
 }
 
 -(void)handleCallbackMsg:(SYWebMsg *)msg{

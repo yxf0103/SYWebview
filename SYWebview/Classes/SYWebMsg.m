@@ -87,13 +87,21 @@ static NSUInteger msg_unique_id = 1;
 
 
 //MARK: public
--(void)send{
+-(void)sendToBridge:(id)bridge{
+    if (bridge == nil) {
+        return;
+    }
     NSMutableDictionary *mDic = [NSMutableDictionary dictionary];
     mDic[sy_msgid] = _msgId;
     mDic[sy_params] = _params;
     mDic[sy_success] = @(_isSuccess);
     mDic[sy_key] = _key;
-    [self sendMsgToH5:mDic];
+    
+    NSMutableDictionary *bridgeDic = [NSMutableDictionary dictionary];
+    bridgeDic[sy_bridge] = bridge;
+    bridgeDic[sy_bridge_params] = mDic;
+    
+    [self sendMsgToH5:bridgeDic];
 }
 
 //MARK: custom
