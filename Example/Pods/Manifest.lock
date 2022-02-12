@@ -1,5 +1,5 @@
 PODS:
-  - SYWebview (0.1.2)
+  - SYWebview (0.1.3)
 
 DEPENDENCIES:
   - SYWebview (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SYWebview: ea91836ca080c3bcc252f9fa118228733f7aed82
+  SYWebview: 292f65552e046e249a3a64ee4276cddb3da10d0a
 
 PODFILE CHECKSUM: 43f4689065781f0fc723ba35755eb9a3de5af0cf
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.11.2
