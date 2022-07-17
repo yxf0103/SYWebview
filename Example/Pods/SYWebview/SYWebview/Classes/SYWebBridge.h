@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @class SYWebBridge;
 @protocol SYWebBridgeDelegate <NSObject>
 
-///未注册的消息
 -(void)bridge:(SYWebBridge *)bridge receiveWebMsg:(SYWebMsg *)msg;
 
 @end
@@ -22,11 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,weak)id<SYWebBridgeDelegate> delegate;
 @property (nonatomic,weak,readonly)WKWebView *webview;
-@property (nonatomic,copy,readonly)NSString *jsBridgeID;
-
-///其它消息
-@property (nonatomic,copy)void (^unDefinedWebMsgHandle)(WKScriptMessage *msg);
-
+@property (nonatomic,strong,readonly)id jsBridge;
 ///展示日志，默认为YES
 @property (nonatomic,assign)BOOL showLog;
 

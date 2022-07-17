@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+            <title>Title</title>
+            <style>
+                #colordv {
+                    width: 100px;
+                    height: 100px;
+                    margin: auto;
+                    background-color: red;
+                }
+                
+                .icon {}
+                
+                img {
+                    width: 200px;
+                    height: 200px;
+                }
+            </style>
+    </head>
+    
+    <body>
+        <button id="btn">注册方式:h5发送消息到native</button>
+        <script>
+            var sy_web_bridge = SYWebInjection();
+            //初始化
+            sy_web_bridge.initWebBridge();
+            
+            var handleTestRegister = function (params, success, fail) {
+                sy_web_bridge.logInNative(params);
+                success({ "msg": "h5 handle msg success,注册方式" });
+            };
+            //注册方式：h5处理native消息
+            sy_web_bridge.registerFunc("native_to_h5", handleTestRegister);
+            
+            window.onload = function () {
+                document.getElementById('btn')
+                .addEventListener('click', function () {
+                    //注册方式：h5发送消息到native
+                    sy_web_bridge.h5SendToNative("h5_to_native", { msg: "jojo" }, function (prams) {
+                        sy_web_bridge.logInNative(prams);
+                    }, function (prams) {
+                        sy_web_bridge.logInNative(prams);
+                    });
+                });
+            }
+        </script>
+        
+    </body>
+    
+</html>

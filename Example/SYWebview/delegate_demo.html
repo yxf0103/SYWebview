@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+            <title>Title</title>
+            <style>
+                #colordv {
+                    width: 100px;
+                    height: 100px;
+                    margin: auto;
+                    background-color: red;
+                }
+                
+                .icon {}
+                
+                img {
+                    width: 200px;
+                    height: 200px;
+                }
+            </style>
+    </head>
+    
+    <body>
+        <button id="btn">非注册方式:h5发送消息到native</button>
+        <script>
+            var sy_web_bridge = SYWebInjection();
+            sy_web_bridge.initWebBridge();
+            //非注册方式:h5收到native消息
+            sy_web_bridge.handleNativeMsg = function (key, params, success, fail) {
+                console.log("请自己实现这个方法");
+                if (key == "native_to_h5") {
+                    sy_web_bridge.logInNative(params);
+                    // success({nice:"success"});
+                    fail({ nice: "fail" });
+                    return;
+                }
+            };
+            
+            window.onload = function () {
+                document.getElementById('btn')
+                .addEventListener('click', function () {
+                    //非注册方式:h5发送消息到native
+                    sy_web_bridge.h5SendToNative("h5_to_native", { name: "color", haha: "haha" }, function (prams) {
+                        sy_web_bridge.logInNative(prams);
+                    }, function (prams) {
+                        sy_web_bridge.logInNative(prams);
+                    });
+                });
+            }
+        </script>
+        
+    </body>
+    
+</html>

@@ -14,7 +14,7 @@ static NSString *const sy_msg_from_web = @"syMsgFromH5";
 @interface SYWebBridge ()<WKScriptMessageHandler>
 
 @property (nonatomic,weak)WKWebView *webview;
-@property (nonatomic,copy)NSString *jsBridgeID;
+@property (nonatomic,strong)id jsBridge;
 
 @end
 
@@ -63,16 +63,14 @@ static NSString *const sy_msg_from_web = @"syMsgFromH5";
     return [NSString stringWithContentsOfFile:jspath encoding:NSUTF8StringEncoding error:nil];
 }
 
+
 //MARK: WKScriptMessageHandler
 -(void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
     if ([message.name isEqualToString:sy_msg_from_web] && [message.body isKindOfClass:NSDictionary.class]) {
         NSDictionary *params = message.body;
         SYWebMsg *msgModel = [SYWebMsg initWithMsg:params webview:_webview];
         if ([msgModel.key isEqualToString:@"sy_web_bridge_init"]) {
-            _jsBridgeID = msgModel.params[@"sy_web_bridge_id"];
-            if (_showLog) {
-                NSLog(@"bridge初始化成功");
-            }
+            _jsBridge = msgModel.params[@"bridge"];
             return;
         }
         //native发送消息到h5收到的回调
@@ -94,8 +92,7 @@ static NSString *const sy_msg_from_web = @"syMsgFromH5";
         }
         return;
     }
-    //其他消息
-    !_unDefinedWebMsgHandle ? : _unDefinedWebMsgHandle(message);
+    NSLog(@"其他消息：%@",message.body);
 }
 
 @end

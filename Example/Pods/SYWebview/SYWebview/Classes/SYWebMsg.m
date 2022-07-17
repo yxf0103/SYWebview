@@ -87,8 +87,8 @@ static NSUInteger msg_unique_id = 1;
 
 
 //MARK: public
--(void)sendToH5WithBridgeId:(NSString *)bridgeId{
-    if (bridgeId == nil) {
+-(void)sendToBridge:(id)bridge{
+    if (bridge == nil) {
         return;
     }
     NSMutableDictionary *mDic = [NSMutableDictionary dictionary];
@@ -98,7 +98,7 @@ static NSUInteger msg_unique_id = 1;
     mDic[sy_key] = _key;
     
     NSMutableDictionary *bridgeDic = [NSMutableDictionary dictionary];
-    bridgeDic[sy_bridge_id] = bridgeId;
+    bridgeDic[sy_bridge] = bridge;
     bridgeDic[sy_bridge_params] = mDic;
     
     [self sendMsgToH5:bridgeDic];

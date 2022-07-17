@@ -1,18 +1,8 @@
 
-var sy_web_bridge_container = {}
-var sy_web_bridge_container_id = 0
-var sy_web_bridge_id = "sy_web_bridge_id"
-
 function nativeSendToH5(params) {
-    //native传过来的参数都是字符串，需要先转换成对象
-    var msgObj = JSON.parse(params)
-    var sy_bridge_id = msgObj[sy_web_bridge_id];
-    var sy_web_bridge = sy_web_bridge_container[sy_bridge_id];
-    var realMsg = msgObj["sy_bridge_params"];
-    if (typeof(realMsg) == "String") {
-        realMsg = JSON.parse(realMsg);
-    }
-    sy_web_bridge.syRealNativeSendToH5(realMsg);
+    var sy_web_bridge = params["sy_bridge"];
+    var realParams = params["sy_bridge_params"];
+    sy_web_bridge.syRealnativeSendToH5(realParams);
 }
 
 function SYWebInjection() {
@@ -22,21 +12,12 @@ function SYWebInjection() {
     //注册的消息
     obj.sy_reg_dic = {};
     obj.uniqueId = 1;
-    obj.sy_bridge_id = sy_web_bridge_id + "_" + sy_web_bridge_container_id;
-    sy_web_bridge_container_id += 1;
 
-    //初始化
     function initWebBridge(){
         var msgid = this.createMsgId();
-        var bridge_id = this.sy_bridge_id;
-        sy_web_bridge_container[bridge_id] = this
-        this.syRealH5SendToNative(msgid,
-                                  "sy_web_bridge_init",
-                                  {sy_web_bridge_id:bridge_id},
-                                  true);
+        this.syRealH5SendToNative(msgid,"sy_web_bridge_init",{"bridge":this});
     }
     
-    //通过native打印日志
     function logInNative(params) {
         var msgid = this.createMsgId()
         this.syRealH5SendToNative(msgid, "sy_web_log", params);
@@ -57,28 +38,16 @@ function SYWebInjection() {
      sy_success:bool
      }
      */
-        var msg = { };
-        msg["sy_msgid"] = msgid;
-        msg["sy_key"] = key;
-        msg["sy_params"] = params;
-        msg["sy_success"] = isSuccess;
-        
-        var callback = {};
-        var noSuccessCallback = success == null || typeof(success) == "undefined";
-        if (!noSuccessCallback){
-            callback["success"] = success;
-        }
-        var noFailCallback = noFailCallback = fail == null || typeof(fail) == "undefined";
-        if(!noFailCallback){
-            callback["fail"] = fail;
-        }
-        var noCallback = noSuccessCallback && noFailCallback;
-        if(!noCallback){
-            this.sy_web_func_dic[msgid] = callback;
-        }
+        var msg = {
+            sy_msgid: msgid,
+            sy_key: key,
+            sy_params: params,
+            sy_success: isSuccess
+        };
+        this.sy_web_func_dic[msgid] = { success: success, fail: fail };
         window.webkit.messageHandlers.syMsgFromH5.postMessage(msg);
     }
-    
+
     ///native执行完消息之后的回调
     function syWebcallback(msgid, params, issuccess) {
         var callback = this.sy_web_func_dic[msgid];
@@ -98,13 +67,16 @@ function SYWebInjection() {
     function createMsgId() {
         return 'cb_' + (this.uniqueId++) + '_' + new Date().getTime();
     }
-    
+
+    //native传过来的参数都是字符串，需要先转换成对象
     ///native发送消息给web
-    function syRealNativeSendToH5(msgObj) {
-        var msgid = msgObj["sy_msgid"];
-        var param = msgObj["sy_params"];
-        var key = msgObj["sy_key"];
-        var issuccess = Boolean(msgObj["sy_success"]);
+    function syRealnativeSendToH5(params) {
+        //native传过来的参数都是字符串，需要先转换成对象
+        var jsonObj = JSON.parse(params);
+        var msgid = jsonObj["sy_msgid"];
+        var param = jsonObj["sy_params"];
+        var key = jsonObj["sy_key"];
+        var issuccess = Boolean(jsonObj["sy_success"]);
         if (key == "sy_web_callback") {
             this.syWebcallback(msgid, param, issuccess);
             return
@@ -150,7 +122,7 @@ function SYWebInjection() {
     obj.initWebBridge = initWebBridge;
     obj.logInNative = logInNative;
     obj.h5SendToNative = h5SendToNative;
-    obj.syRealNativeSendToH5 = syRealNativeSendToH5;
+    obj.syRealnativeSendToH5 = syRealnativeSendToH5;
     obj.handleNativeMsg = handleNativeMsg;
     obj.registerFunc = registerFunc;
     obj.handleRegEvent = handleRegEvent;

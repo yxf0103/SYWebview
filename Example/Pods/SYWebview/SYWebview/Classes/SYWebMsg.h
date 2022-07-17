@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString *const sy_bridge_id = @"sy_web_bridge_id";
+static NSString *const sy_bridge = @"sy_bridge";
 static NSString *const sy_bridge_params = @"sy_bridge_params";
 
 static NSString *const sy_msgid = @"sy_msgid";
@@ -39,7 +39,7 @@ typedef void (^SYWebCallback)(NSDictionary *_Nullable);
 +(instancetype)initWithMsg:(NSDictionary *)msg webview:(WKWebView *)webview;
 +(instancetype)initwithKey:(NSString *)key param:(NSDictionary *)param webview:(WKWebView *)webview;
 
--(void)sendToH5WithBridgeId:(NSString *)bridgeId;
+-(void)sendToBridge:(id)bridge;
 
 @end
 

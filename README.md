@@ -32,37 +32,50 @@ pod 'SYWebview'
 #### 1.1 native初始化
 ```
 _bridge = [SYWebBridge initWithWebview:webview];
- [_bridge addBridge];
- _bridge.delegate = self;
+[_bridge addBridge];
+_bridge.unDefinedWebMsgHandle = ^(WKScriptMessage * _Nonnull msg) {
+    NSLog(@"其它消息:%@",msg);
+};
 ```
-#### 1.2 native给h5发送消息
+#### 1.2 注册方式
+#### 1.2.1 注册方式,native接收H5传递来的额消息
 ```
-SYWebMsg *msg = [SYWebMsg initwithKey:@"test" param:@{@"wahaha":@"hahaha"} webview:_bridge.webview];
-[_bridge sendMsgToH5:msg success:^(NSDictionary * _Nullable dic) {
-    NSLog(@"成功：%@",dic);
-} fail:^(NSDictionary * _Nullable dic) {
-    NSLog(@"失败：%@",dic);
+[_bridge registerKey:@"h5_to_native" handle:^(NSDictionary * _Nullable dic,SYWebCallback _Nullable success,SYWebCallback _Nullable fail) {
+    NSLog(@"注册方式:native收到h5消息:%@",dic);
+    success(@{@"msg":@"register test success"});
 }];
 ```
-#### 1.3 native处理h5发过来的消息
-*代理模式
+#### 1.2.2 注册方式:native发送消息到h5
 ```
+SYWebMsg *msg = [SYWebMsg initwithKey:@"native_to_h5"
+                                param:@{@"wahaha":@"hahaha"}
+                                webview:_bridge.webview];
+[_bridge sendMsgToH5:msg success:^(NSDictionary * _Nullable dic) {
+    NSLog(@"注册方式:native 发送消息到 h5 成功:%@",dic);
+} fail:^(NSDictionary * _Nullable dic) {
+    NSLog(@"注册方式:native 发送消息到 h5 失败:%@",dic);
+}];
+```
+#### 1.3 非注册方式
+#### 1.3.1 非注册方式,native处理h5消息
+```
+//MARK: SYWebBridgeDelegate
 -(void)bridge:(SYWebBridge *)bridge receiveWebMsg:(SYWebMsg *)msg{
-    if ([msg.key isEqual:@"changeColor"]) {
-        ...do something
-        //msg.success(@{@"changeColor":@"success"});
-        //msg.fail(@{@"changeColor":@"fail"});
+    if ([msg.key isEqual:@"h5_to_native"]) {
+        NSLog(@"非注册方式,native处理h5消息:%@",msg.params);
+        msg.fail(@{@"changeColor":@"fail"});
     }
 }
-
 ```
-*注册模式
+#### 1.3.2 非注册方式:native发送消息到h5
 ```
-[_bridge registerKey:@"h5_to_native" handle:^(NSDictionary * _Nullable dic,
-                                              SYWebCallback _Nullable success,
-                                              SYWebCallback _Nullable fail) {
-    NSLog(@"处理h5消息:%@",dic);
-    //success(@{@"msg":@"register test success"});
+SYWebMsg *msg = [SYWebMsg initwithKey:@"native_to_h5" 
+                                param:@{@"wahaha":@"hahaha"} 
+                                webview:_bridge.webview];
+[_bridge sendMsgToH5:msg success:^(NSDictionary * _Nullable dic) {
+    NSLog(@"非注册方式,h5处理native消息成功：%@",dic);
+} fail:^(NSDictionary * _Nullable dic) {
+    NSLog(@"非注册方式,h5处理native消息失败：%@",dic);
 }];
 ```
 ### 2.js部分
@@ -73,28 +86,44 @@ var sy_web_bridge = SYWebInjection();
 sy_web_bridge.initWebBridge();
 ```
 
-#### 2.2 js给native发送消息
+#### 2.2 注册方式
+#### 2.2.1 注册方式：h5处理native消息
 ```
-sy_web_bridge.h5SendToNative("h5_to_native",{msg:"jojo"},function(prams){
-    //...成功的回调处理
-},function(prams){
-    //...失败的回调处理
+var handleTestRegister = function (params, success, fail) {
+    sy_web_bridge.logInNative(params);
+    success({ "msg": "h5 handle msg success,注册方式" });
+};
+sy_web_bridge.registerFunc("native_to_h5", handleTestRegister);
+```
+#### 2.2.2 注册方式：h5发送消息到native
+```
+sy_web_bridge.h5SendToNative("h5_to_native", { msg: "jojo" }, function (prams) {
+    sy_web_bridge.logInNative(prams);
+}, function (prams) {
+    sy_web_bridge.logInNative(prams);
 });
 ```
 
-#### 2.3 js处理native发过来的消息
-*直接处理
+#### 2.3 非注册方式
+#### 2.3.1 非注册方式:h5收到native消息
 ```
-sy_web_bridge.handleNativeMsg = function(key,params, success, fail) {
-}
-```
-*注册模式
-```
-var handleTestRegister = function(params,success,fail){
-    sy_web_bridge.logInNative(params);
-    success({"msg":"h5 handle msg success"});
+//请自己实现这个方法
+sy_web_bridge.handleNativeMsg = function (key, params, success, fail) {
+    if (key == "native_to_h5") {
+        sy_web_bridge.logInNative(params);
+        // success({nice:"success"});
+        fail({ nice: "fail" });
+        return;
+    }
 };
-sy_web_bridge.registerFunc("native_to_h5",handleTestRegister);
+```
+#### 2.3.2 非注册方式:h5发送消息到native
+```
+sy_web_bridge.h5SendToNative("h5_to_native", { name: "color", haha: "haha" }, function (prams) {
+    sy_web_bridge.logInNative(prams);
+}, function (prams) {
+    sy_web_bridge.logInNative(prams);
+});
 ```
 
 ## Author

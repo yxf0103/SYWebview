@@ -4,6 +4,7 @@ platform :ios, '9.0'
 
 target 'SYWebview_Example' do
   pod 'SYWebview', :path => '../'
+#pod 'SYWebview'
 
   target 'SYWebview_Tests' do
     inherit! :search_paths

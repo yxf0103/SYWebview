@@ -14,6 +14,7 @@
 #import "SYWebBridge+Register.h"
 #import "SYWebBridge.h"
 #import "SYWebMsg.h"
+#import "SYWebview.h"
 
 FOUNDATION_EXPORT double SYWebviewVersionNumber;
 FOUNDATION_EXPORT const unsigned char SYWebviewVersionString[];

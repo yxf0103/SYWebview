@@ -44,11 +44,7 @@ const char msg_dic = 'm';
     nativeBack.success = succback;
     nativeBack.fail = failback;
     self.msgDic[msg.msgId] = nativeBack;
-    [self sendMsgToH5:msg];
-}
-
--(void)sendMsgToH5:(SYWebMsg *)msg{
-    [msg sendToH5WithBridgeId:self.jsBridgeID];
+    [msg sendToBridge:self.jsBridge];
 }
 
 -(void)handleCallbackMsg:(SYWebMsg *)msg{
