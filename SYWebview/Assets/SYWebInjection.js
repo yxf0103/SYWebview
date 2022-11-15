@@ -1,6 +1,5 @@
 
 var sy_web_bridge_container = {}
-var sy_web_bridge_container_id = 0
 var sy_web_bridge_id = "sy_web_bridge_id"
 
 function nativeSendToH5(params) {
@@ -21,9 +20,7 @@ function SYWebInjection() {
     obj.sy_web_func_dic = {};
     //注册的消息
     obj.sy_reg_dic = {};
-    obj.uniqueId = 1;
-    obj.sy_bridge_id = sy_web_bridge_id + "_" + sy_web_bridge_container_id;
-    sy_web_bridge_container_id += 1;
+    obj.sy_bridge_id = sy_web_bridge_id + "_" + new Date().getTime();
 
     //初始化
     function initWebBridge(){
@@ -96,7 +93,7 @@ function SYWebInjection() {
     }
 
     function createMsgId() {
-        return 'cb_' + (this.uniqueId++) + '_' + new Date().getTime();
+        return 'cb_' + new Date().getTime();
     }
     
     ///native发送消息给web
@@ -160,15 +157,5 @@ function SYWebInjection() {
     obj.syWebcallback = syWebcallback;
 
 
-    return obj;
-}
-
-
-function SYWebMsg(msgid, key, params, issuccess) {
-    var obj = new Object();
-    obj.msgid = msgid;
-    obj.key = key;
-    obj.params = params;
-    obj.issuccess = Boolean(issuccess);
     return obj;
 }

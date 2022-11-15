@@ -18,8 +18,6 @@ static NSString *const sy_web_callback = @"sy_web_callback";
  */
 
 
-static NSUInteger msg_unique_id = 1;
-
 #import "SYWebMsg.h"
 
 @interface SYWebMsg ()
@@ -27,6 +25,9 @@ static NSUInteger msg_unique_id = 1;
 @property (nonatomic,weak)WKWebView *webview;
 ///消息ID
 @property (nonatomic,copy)NSString *msgId;
+@property (nonatomic,copy)NSString *msgIdPrefix;
+@property (nonatomic,assign)NSUInteger msgUniqueId;
+
 ///消息key
 @property (nonatomic,copy)NSString *key;
 ///消息带的参数
@@ -54,6 +55,14 @@ static NSUInteger msg_unique_id = 1;
     model.params = param;
     model.webview = webview;
     return model;
+}
+
+-(instancetype)init{
+    if (self = [super init]) {
+        _msgIdPrefix = @"0";
+        _msgUniqueId = 0;
+    }
+    return self;
 }
 
 //MARK: getter
@@ -137,8 +146,11 @@ static NSUInteger msg_unique_id = 1;
 -(NSString *)createMsgid{
     NSString *str = @"";
     @synchronized (self) {
-        str = [NSString stringWithFormat:@"sy_native_msg_%lu_%p",(unsigned long)msg_unique_id,self];
-        msg_unique_id += 1;
+        if (_msgUniqueId > 10000) {
+            _msgIdPrefix = [NSString stringWithFormat:@"%@0",_msgIdPrefix];
+            _msgUniqueId = 0;
+        }
+        str = [NSString stringWithFormat:@"sy_native_msg_%p_%@_%lu",self,_msgIdPrefix,_msgUniqueId];
     }
     return str;
 }
